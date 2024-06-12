@@ -1,0 +1,980 @@
+@import "variables";
+@import "~bootstrap/scss/bootstrap";
+@import "~bootstrap-icons/font/bootstrap-icons.scss";
+@import "./layout/sidebar";
+@import "./layout/container";
+
+* {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  width: 100%;
+  background-color: white;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-image: url("https://gunvip.vn/assets/img/bg1.png");
+}
+
+.header {
+  height: unset;
+}
+
+nav#menu {
+  width: 100%;
+  height: auto;
+  padding: 0 0 20px 0;
+  background: -moz-linear-gradient(
+    top,
+    rgba(41, 39, 46, 1) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  background: -webkit-linear-gradient(
+    top,
+    rgba(41, 39, 46, 1) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  /* background: linear-gradient(to bottom, rgba(41, 39, 46, 48) 0%, rgba(0, 0, 0, 0) 100%); */
+  background: linear-gradient(
+    to bottom,
+    rgb(41 39 46 / 88%) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#29272e', endColorstr='#00000000',GradientType=0 );
+  text-align: center;
+  position: relative;
+  z-index: 90;
+}
+
+nav#menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0;
+  width: 1200px;
+  position: relative;
+  clear: both;
+}
+
+nav#menu ul li {
+  display: inline-block;
+  position: relative;
+}
+
+nav#menu > ul > li > a {
+  text-align: center;
+  padding: 28px 35px 10px 35px;
+  font-family: "BreeSerif";
+  font-size: 19px;
+}
+
+nav#menu a {
+  color: #fff;
+  /* text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.7); */
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: inline-block;
+  text-decoration: none;
+}
+
+header .logo {
+  text-align: center;
+  padding: 0 0 0 0;
+}
+
+main {
+  display: inline-block;
+  width: 100%;
+}
+
+main .container {
+  margin-top: 4px;
+}
+
+.wrap-flex {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+aside {
+  // float: left;
+  width: 300px;
+}
+
+aside #login {
+  border: 1px solid #af6313;
+  border-radius: 4px;
+  background-color: #f5eada;
+  background-image: url("https://gunvip.vn/assets/img/bg1.jpg");
+  padding: 14px;
+  padding-top: 45px;
+  position: relative;
+  margin: 0 0 20px 0;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.3);
+}
+
+aside #login input {
+  background: #fff;
+  border: 1px solid #a49c7a;
+  color: #555;
+  width: 192px;
+  height: 40px;
+  border-radius: 4px;
+  margin: 0 0 6px 0;
+  float: left;
+  outline: 0;
+  padding: 0 15px;
+  box-shadow: 0 0 10px rgba(164, 156, 122, 0);
+}
+
+aside #login button.login {
+  background: rgb(245, 138, 26);
+  background: -moz-linear-gradient(
+    top,
+    rgba(245, 138, 26, 1) 0%,
+    rgba(250, 83, 0, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    top,
+    rgba(245, 138, 26, 1) 0%,
+    rgba(250, 83, 0, 1) 100%
+  );
+  background: linear-gradient(
+    to bottom,
+    rgba(245, 138, 26, 1) 0%,
+    rgba(250, 83, 0, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f58a1a', endColorstr='#fa5300',GradientType=0 );
+  border: 1px solid #a49c7a;
+  border-radius: 4px;
+  width: 72px;
+  height: 86px;
+  color: #fff;
+  margin: 0 0 0 6px;
+  font-size: 11px;
+  font-weight: 900;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  cursor: pointer;
+}
+
+aside #login button.login:before {
+  content: "";
+  background: url("https://gunvip.vn/assets/img/renders/signin.png");
+  width: 43px;
+  height: 42px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+aside #login .footer {
+  width: 110%;
+  width: calc(100% + 28px);
+  margin: 10px -14px 0 -14px;
+  font-size: 14px;
+  display: inline-block;
+  vertical-align: top;
+  padding: 12px 15px 0 15px;
+  border-top: 1px solid rgba(164, 156, 122, 0.3);
+}
+
+aside #login .footer .left {
+  float: left;
+  color: #a49c7a;
+  font-weight: 400;
+}
+
+aside #login .footer .right {
+  float: right;
+  font-weight: 900;
+  color: #ff7004;
+}
+
+aside #login:after {
+  content: "";
+  position: absolute;
+  width: 41px;
+  height: 18px;
+  /* background: url(/assets/img/renders/login2.png); */
+  top: 25px;
+  left: 121px;
+}
+
+aside .widget,
+.card {
+  border: 1px solid #af6313;
+  border-radius: 4px;
+  background-color: #f5eada;
+  background-image: url("https://gunvip.vn/assets/img/bg2.jpg");
+  position: relative;
+  margin: 0 0 30px 0;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.3);
+}
+
+aside .widget h3,
+.card--title {
+  background: rgba(242, 138, 26, 0.2);
+  text-align: center;
+  font-size: 15px;
+  font-weight: 900;
+  color: #af6313;
+  padding: 12px;
+}
+
+aside .widget .inner,
+.card--inner {
+  padding: 14px;
+}
+
+aside .widget ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+main .listtag {
+  width: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+main .listtag li {
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+  height: 40px;
+  font-size: 14px;
+  line-height: 40px;
+  background: #fff;
+  color: #000;
+  margin: 0 0 4px 0;
+}
+
+main .listtag li a {
+  display: inline-block;
+  background: #fff;
+  width: 100%;
+  height: 100%;
+  color: #000;
+}
+
+main .listtag li .tag.green,
+main .listtag li .tag.green:after {
+  background: #349517;
+}
+
+main .listtag li .tag {
+  width: 36px;
+  max-width: 32px;
+  height: 40px;
+  background: #000;
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 12px 0 0;
+  text-align: center;
+  font-size: 10px;
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: -0.02em;
+  position: relative;
+  -webkit-transition: all 200ms linear;
+  -moz-transition: all 200ms linear;
+  -ms-transition: all 200ms linear;
+  transition: all 200ms linear;
+}
+
+main .listtag li .tag.green:after {
+  background: #349517;
+}
+
+main .listtag li .tag:after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background: #000;
+  position: absolute;
+  right: -3px;
+  top: 17px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+main .listtag li .tag {
+    width: 36px;
+    max-width: 32px;
+    height: 40px;
+    background: #000;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 12px 0 0;
+    text-align: center;
+    font-size: 10px;
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: -0.02em;
+    position: relative;
+    -webkit-transition: all 200ms linear;
+    -moz-transition: all 200ms linear;
+    -ms-transition: all 200ms linear;
+    transition: all 200ms linear;
+}
+
+aside .filter {
+    font-size: 0;
+    margin: 0 0 6px 0;
+}
+
+aside .filter select:first-child {
+    border-radius: 20px 0 0 20px;
+}
+
+aside .filter select {
+    width: 50%;
+    height: 36px;
+    display: inline-block;
+    border: 1px solid #a49c7a;
+    padding: 0 12px;
+    font-size: 12px;
+    color: #a49c7a;
+    outline: 0;
+    background-image: url("https://gunvip.vn/assets/img/select.png");
+    background-repeat: no-repeat;
+    background-position: center right;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+aside .filter select:last-child {
+    border-radius: 0 20px 20px 0;
+    border-left: 0;
+}
+
+aside .widget ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+main .listtag li.head {
+    background: transparent;
+    font-size: 12px;
+    color: #a49c7a;
+    font-weight: 900;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+main .listtag.small li {
+    height: 30px;
+    line-height: 30px;
+}
+
+main .listtag li {
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+}
+
+main .listtag li.head .tag {
+    background: transparent;
+}
+
+main .listtag.small li .tag {
+    width: 26px;
+    max-width: 22px;
+    height: 20px;
+    line-height: 20px;
+    margin: 5px 10px 5px 5px;
+}
+
+main .listtag li .right {
+    float: right;
+    padding: 0 8px;
+}           
+
+main .listtag.small li {
+    height: 30px;
+    line-height: 30px;
+    color: #545454;
+}
+
+main .listtag li .tag.green, main .listtag li .tag.green:after {
+    background: #349517;
+}
+
+main .listtag.small li .tag:after {
+    top: 7px;
+}
+
+main .listtag li .tag:after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: #000;
+    position: absolute;
+    right: -3px;
+    top: 17px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+main section {
+    width: 870px;
+    // float: right;
+}
+
+.slideshow-container {
+    max-width: 620px;
+    position: relative;
+    margin: 0 0 40px 0;
+    border: 1px solid #385c84;
+    background: #1c324a;
+    box-shadow: 0 0 16px rgba(0, 0, 0, .3);
+    border-radius: 4px;
+    overflow: hidden;
+    float: left;
+}   
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+.mySlides > a > img {
+    vertical-align: middle;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-10%);
+    width: auto;
+    padding: 8px 16px 9px 8px;
+    margin-top: -22px;
+    color: #ff850a;
+    background-color: rgba(245, 245, 245, .5);
+    font-weight: bold;
+    font-size: 32px;
+    transition: 0.6s ease;
+    border-radius: 0 32px 32px 0;
+    user-select: none;
+}
+
+.slide-right-custom {
+    width: 250px;
+    float: right;
+    margin: 0 0 40px 0;
+}
+
+.slide-right-custom > .item-right {
+    width: 100%;
+    height: 48px;
+    font-size: 12px;
+    text-transform: uppercase;
+    line-height: 48px;
+    margin: 0 0 5px 0;
+}
+
+.item-right.active a, .dot.active, .dot:hover {
+    background-color: #ff850a !important;
+    color: #fff;
+}
+
+.slide-right-custom > .item-right > a {
+    display: inline-block;
+    color: #92897a;
+    width: 100%;
+    height: 100%;
+    padding: 0 16px;
+    background-color: #f5e9d7;
+    cursor: pointer;
+}
+
+main .box.mid {
+  max-width: 570px;
+}
+
+main .box {
+  width: 100%;
+  border: 1px solid #af6313;
+  /* border: 1px solid #b378e2; */
+  border-radius: 4px;
+  background-color: #f5eada;
+  background-image: url("https://gunvip.vn/assets/img/bg2.jpg");
+  position: relative;
+  margin: 0 0 30px 0;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.3);
+  display: inline-block;
+  vertical-align: top;
+}
+
+.render01 {
+  width: 91px;
+  height: 84px;
+  background-image: url("https://gunvip.vn/assets/img/renders/01.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  top: -16px;
+  right: -26px;
+}
+
+main section .tabsContent a.seeall {
+  width: 105.6%;
+  width: calc(100% + 30px);
+  margin: 15px -15px 0 -15px;
+  color: #a49c7a;
+  font-size: 13px;
+  display: inline-block;
+  padding: 12px;
+  text-align: center;
+  border-top: 1px solid rgba(164, 156, 122, 0.3);
+}
+
+main section .cards {
+  float: right;
+  width: 280px;
+  text-align: right;
+}
+
+main section .cards a {
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+  height: 100px;
+  margin: -5px 0 25px 0;
+}
+
+main section .cards a.right img {
+  margin-right: -10px;
+}
+
+main section .box.guia {
+  margin-top: 36px;
+}
+
+main section .box.guia > .title-new {
+  font-size: 20px;
+  color: #c3332a;
+  font-weight: 900;
+  text-transform: uppercase;
+  display: inline-block;
+  vertical-align: top;
+  margin: -60px 0 0 20px;
+}
+
+main section .box.guia > .title-new:before {
+  content: '';
+  width: 111px;
+  height: 93px;
+  background-image: url("https://gunvip.vn/assets/img/renders/02.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+main section .box .biglist {
+  padding: 8px 40px 20px 40px;
+  margin: 0;
+  list-style: none;
+}
+
+main section .box .biglist li {
+  display: inline-block;
+  width: 100%;
+  background: #fff;
+  border-radius: 100px 0 0 100px;
+  margin: 0 0 20px 0;
+  padding: 0 40px 0 0;
+}
+
+main section .box .biglist li i.icon-controls {
+  background-position: 0 -34px;
+}
+
+main section .box .biglist li i[class*="icon"] {
+  width: 100px;
+  height: 100px;
+  background-color: #f28a1a;
+  background-image: url("https://gunvip.vn/assets/img/icons.png");
+  background-repeat: no-repeat;
+  float: left;
+  border-radius: 100%;
+  margin: 0 16px 0 0;
+}
+
+main section .box .biglist li strong {
+  font-size: 15px;
+  color: #f28a1a;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin: 17px 0 5px 0;
+  display: inline-block;
+}
+
+main section .box .biglist li p {
+  font-size: 16px;
+  color: #3c3c3c;
+  line-height: 140%;
+}
+
+main section .tabsAnchor {
+  width: 100%;
+  height: 42px;
+  background: #ff850a;
+  border-radius: 4px 4px 0 0;
+  font-size: 0;
+}
+
+main section .tabsAnchor a:first-child {
+  border-radius: 4px 0 0 0;
+}
+
+main section .tabsAnchor a.active {
+  // background: #dd8226;
+  color: #fff;
+  border-color: #dd8226;
+}
+
+main section .tabsAnchor a {
+  color: #FFF;
+  padding: 0 18px;
+  line-height: 42px;
+  font-size: 13px;
+  font-weight: 900;
+  border-right: 1px solid #d17717;
+  display: inline-block;
+  position: relative;
+}
+
+main section .tabsAnchor a.active:after {
+  // bottom: -4px;
+  -webkit-filter: opacity(100%);
+  filter: opacity(100%);
+}
+
+main section .tabsAnchor a:after {
+  content: '';
+  position: absolute;
+  bottom: 4px;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  background: #dd8226;
+  -webkit-transform: translateX(-50%) rotate(45deg);
+  -moz-transform: translateX(-50%) rotate(45deg);
+  -ms-transform: translateX(-50%) rotate(45deg);
+  -o-transform: translateX(-50%) rotate(45deg);
+  transform: translateX(-50%) rotate(45deg);
+  -webkit-filter: opacity(0%);
+  filter: opacity(0%);
+  -webkit-transition: all 200ms linear;
+  -moz-transition: all 200ms linear;
+  -ms-transition: all 200ms linear;
+  transition: all 200ms linear;
+}
+
+main section .tabsAnchor a.active:after {
+  bottom: -4px;
+  -webkit-filter: opacity(100%);
+  filter: opacity(100%);
+}
+
+main section .tabsContent > div {
+  width: 100%;
+  padding: 20px 15px 0 15px;
+  display: none;
+  vertical-align: top;
+}
+
+main .listtag {
+  width: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+main .listtag li {
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+  height: 40px;
+  font-size: 14px;
+  line-height: 40px;
+  background: #fff;
+  color: #000;
+  margin: 0 0 4px 0;
+}
+
+main section .tabsContent a.seeall {
+  width: 105.6%;
+  width: calc(100% + 30px);
+  margin: 15px -15px 0 -15px;
+  color: #a49c7a;
+  font-size: 13px;
+  display: inline-block;
+  padding: 12px;
+  text-align: center;
+  border-top: 1px solid rgba(164, 156, 122, 0.3);
+}
+
+main section .box .biglist li i.icon-fight-lab {
+  background-position: -100px -30px;
+}
+
+main section .box.itens {
+  margin-top: 36px;
+}
+
+main section .box.itens > .title-new {
+  font-size: 20px;
+  color: #5c3746;
+  font-weight: 900;
+  text-transform: uppercase;
+  display: inline-block;
+  vertical-align: top;
+  margin: -50px 0 0 35px;
+}
+
+main section .box.itens > .title-new:before {
+  content: '';
+  width: 75px;
+  height: 77px;
+  background-image: url("https://gunvip.vn/assets/img/renders/03.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+main section .tabsAnchor.small {
+  background: transparent;
+  float: right;
+  width: auto;
+  margin: -25px 0 0 0;
+  text-transform: none;
+  font-family: "BreeSerif";
+}
+
+main section .tabsAnchor {
+  width: 100%;
+  height: 42px;
+  background: #ff850a;
+  border-radius: 4px 4px 0 0;
+  font-size: 0;
+}
+
+main section .tabsAnchor.small a.active {
+  /* color: #af6313; */
+  color: #FFFFFF;
+  font-weight: 900;
+}
+
+main section .tabsAnchor.small a {
+  background: transparent;
+  color: #FFFFFF;
+  padding: 0 12px;
+  line-height: 15px;
+  font-size: 15px;
+  font-weight: 400;
+  border-right: 1px solid #FFFFFF;
+  display: inline-block;
+  position: relative;
+}
+
+main section .tabsAnchor a:first-child {
+  border-radius: 4px 0 0 0;
+}
+
+main section .tabsAnchor a.active {
+  background: #dd8226;
+  color: #fff;
+  border-color: #dd8226;
+}
+
+main section .tabsAnchor.small a:after {
+  width: 0;
+  height: 0;
+  background: transparent;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  /* border-top: 8px solid #af6313; */
+  border-top: 8px solid #b378e2;
+  margin-left: -9px;
+  bottom: -17px;
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  -o-transform: none;
+  transform: none;
+}
+
+main section .tabsAnchor a.active:after {
+  bottom: -4px;
+  -webkit-filter: opacity(100%);
+  filter: opacity(100%);
+}
+
+main section .tabsAnchor a:after {
+  content: '';
+  position: absolute;
+  bottom: 4px;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  background: #dd8226;
+  -webkit-transform: translateX(-50%) rotate(45deg);
+  -moz-transform: translateX(-50%) rotate(45deg);
+  -ms-transform: translateX(-50%) rotate(45deg);
+  -o-transform: translateX(-50%) rotate(45deg);
+  transform: translateX(-50%) rotate(45deg);
+  -webkit-filter: opacity(0%);
+  filter: opacity(0%);
+  -webkit-transition: all 200ms linear;
+  -moz-transition: all 200ms linear;
+  -ms-transition: all 200ms linear;
+  transition: all 200ms linear;
+}
+
+main section .tabsContent > div.active {
+  display: inline-block;
+}
+
+main section .tabsContent > div {
+  width: 100%;
+  padding: 20px 15px 0 15px;
+  display: none;
+  vertical-align: top;
+}
+
+main .listsquare {
+  width: 100%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0;
+  vertical-align: top;
+}
+
+main .listsquare li {
+  background: #fff;
+  border: 1px solid #d3d0c4;
+  border-radius: 4px;
+  width: 120px;
+  height: 80px;
+  margin: 0 9px 42px 9px;
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+}
+
+main .listsquare li img {
+  vertical-align: top;
+  max-height: 68px;
+  margin: 5px;
+}
+
+main .listsquare li span {
+  width: 100%;
+  font-size: 12px;
+  color: #f28a1a;
+  display: inline-block;
+  vertical-align: top;
+  margin: 2px 0 0 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+footer {
+  width: 100%;
+  height: 230px;
+  text-align: center;
+  background-image: url("https://gunvip.vn//assets/img/footer.png");
+  background-position: top center;
+  background-repeat: no-repeat;
+  margin: 40px 0 -50px 0;
+  position: relative;
+}
+
+footer .bottom {
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  font-size: 12px;
+  color: #898989;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+footer .text {
+  font-size: 20px;
+  font-weight: 900;
+  color: #fff;
+  margin: 95px 0;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  font-family: 'BreeSerif';
+  text-shadow: #000 0px 0px 20px, #000 0px 0px 10px, #000 0px 0px 10px, #000 0px 0px 10px, #000 0px 0px 1px, #000 0px 0px 1px;
+  color: #fffb51;
+}
+
+footer .bottom .left {
+  float: left;
+}
+footer .bottom ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+footer .bottom .right {
+  float: right;
+}
+
+footer .bottom ul li {
+  display: inline-block;
+  margin: 0;
+}
+
+footer .bottom a {
+  color: #898989;
+}
+
+footer .bottom ul li:after {
+  content: '|';
+  margin: 0 8px;
+}
+
+footer .bottom a {
+  color: #898989;
+}
