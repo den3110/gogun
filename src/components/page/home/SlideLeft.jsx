@@ -6,7 +6,7 @@ const SlideLeft = () => {
     <div className="slideshow-container animElement slide-left in-view">
       <div className="mySlides fade" style={{display: "block"}}>
         <Link href="/">
-          <img alt="Can't display" referrerPolicy="no-referrer" src="https://gunvip.vn/storage/images/SLIDE1.png" style={{ width: "100%" }} />
+          <img alt="Can't display" referrerPolicy="no-referrer" src="http://gunvip.vn/storage/images/SLIDE1.png" style={{ width: "100%" }} />
         </Link>
       </div>
     </div>
