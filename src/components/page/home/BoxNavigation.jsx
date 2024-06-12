@@ -36,7 +36,7 @@ const BoxNavigation = () => {
             <center>
               <img
                 alt="Can't open"
-                src="http://gunvip.vn/assets/img/loader.gif"
+                src="https://gogun.vn/assets/img/loader.gif"
               />
             </center>
           </div>

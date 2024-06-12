@@ -8,7 +8,7 @@ const Banner = () => {
       <Link href={"/"}>
         <img
           alt=""
-          src={"http://gunvip.vn/assets/img/sub-header.png?ver=202303142341"}
+          src={"https://gogun.vn/assets/img/sub-header.png?ver=202303142341"}
           style={{ width: "100%", height: "auto", marginTop: -93 }}
         />
       </Link>
