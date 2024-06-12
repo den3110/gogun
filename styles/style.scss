@@ -5,8 +5,7 @@
 @import "./layout/container";
 
 * {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: "Bree Serif", serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -25,7 +24,7 @@ body {
 }
 
 .header {
-  height: unset;
+  height: 472px;
 }
 
 nav#menu {
@@ -977,4 +976,120 @@ footer .bottom ul li:after {
 
 footer .bottom a {
   color: #898989;
+}
+
+.button-functional {
+  margin: 4px 0;
+}
+
+.button-functional .item {
+  width: 132px;
+  font-size: 16px;
+  padding: 15px 10px;
+  font-weight: 500;
+  color: #fff;
+  border-radius: 4px;
+  border-width: 1px;
+  border-style: solid;
+  vertical-align: top;
+  cursor: pointer;
+}
+
+.button-functional {
+  margin: 4px 0;
+}
+
+main section .box.register {
+  margin-top: 36px;
+}
+
+main section .box.register > .title-new {
+  font-size: 20px;
+  color: #5c3746;
+  font-weight: 900;
+  text-transform: uppercase;
+  display: inline-block;
+  vertical-align: top;
+  margin: -50px 0 0 35px;
+}
+
+main section .box.register > .title-new:before {
+  content: '';
+  width: 75px;
+  height: 77px;
+  background-image: url("https://gogun.vn/assets/img/renders/05.gif");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+main section .tabsContent > div.active {
+  display: inline-block;
+}
+
+main section .box .biglist {
+  padding: 8px 40px 20px 40px;
+  margin: 0;
+  list-style: none;
+}
+
+form.detail-account {
+  width: 100%;
+  display: inline-block;
+}
+
+form.detail-account label {
+  width: 100%;
+  display: inline-block;
+  text-align: left;
+  margin: 0 0 14px 0;
+  font-size: 15px;
+  font-weight: 900;
+  color: #5c3746;
+}
+
+form.detail-account label span {
+  display: inline-block;
+}
+
+.button-functional-account {
+  margin: 4px 0;
+  height: 100%;
+}
+
+.button-functional-account .item {
+  width: 19%;
+  height: 35px;
+  font-size: 13px;
+  padding: 15px 10px;
+  font-weight: 400;
+  color: #fff;
+  border-radius: 4px;
+  border-width: 1px;
+  border-style: solid;
+  display: inline-flex;
+  vertical-align: top;
+  cursor: pointer;
+  margin: 5px 0;
+  justify-content: center;
+  align-items: center;
+  font-family: 'BreeSerif';
+  margin-right: 8px;
+}
+
+.button-functional-account .item img {
+  margin: 0 10px;
+}
+
+main section#account {
+  float: right;
+}
+
+aside#account-leftside {
+  float: left;
+}
+
+.button-functional-account img {
+  margin: 0 auto;
 }

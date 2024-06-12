@@ -1,15 +1,16 @@
 import React from 'react'
 import Login from './Login'
-import ServerList from './ServerList'
-import Ranking from './Ranking'
-import FanPage from './FanPage'
+// import ServerList from './ServerList'
+import ServerList from '../../General/ServerList'
+import Ranking from '../../General/Ranking'
+import FanPage from '../../General/FanPage'
 
 const LeftSide = () => {
   return (
     <aside>
         <Login />
         <ServerList />
-        <Ranking />
+        <Ranking /> 
         <FanPage />
     </aside>
   )

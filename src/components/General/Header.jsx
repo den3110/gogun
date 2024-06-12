@@ -10,7 +10,7 @@ const Header = () => {
                 <Link href={"/"}>TRANG CHỦ</Link>
             </li>
             <li>
-                <Link href={"/av"}>TÀI KHOẢN</Link>
+                <Link href={"/account"}>TÀI KHOẢN</Link>
             </li>
             <li>
                 <Link href={"/"}>NẠP TIỀN</Link>

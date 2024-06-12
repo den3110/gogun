@@ -1,10 +1,9 @@
 import React from 'react'
+import Account from '../src/components/page/account/Account'
 
 const Av = () => {
   return (
-    <div>
-      hihihi
-    </div>
+    <Account />
   )
 }
 
