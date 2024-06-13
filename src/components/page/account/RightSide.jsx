@@ -1,6 +1,7 @@
 import React from "react";
 import Title from "./Title";
 import TabContent from "./TabContent";
+import DynamicContent from "./DynamicContent";
 
 const RightSide = () => {
   return (
@@ -9,6 +10,7 @@ const RightSide = () => {
         <Title />
         <TabContent />
       </section>
+      <DynamicContent />
     </section>
   );
 };

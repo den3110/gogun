@@ -4,6 +4,12 @@
 @import "./layout/sidebar";
 @import "./layout/container";
 
+:-webkit-any(article, aside, nav, section) :-webkit-any(article, aside, nav, section) h1 {
+  font-size: 1.17em;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+}
+
 * {
   font-family: "Bree Serif", serif;
   margin: 0;
@@ -1092,4 +1098,199 @@ aside#account-leftside {
 
 .button-functional-account img {
   margin: 0 auto;
+}
+
+form.account {
+  width: 100%;
+  display: inline-block;
+}
+
+form.account label {
+  width: 100%;
+  display: inline-block;
+  text-align: left;
+  margin: 0 0 14px 0;
+  font-size: 15px;
+  font-weight: 900;
+  color: #5c3746;
+}
+
+form.account label span {
+  margin: 0 0 10px 0;
+  display: inline-block;
+}
+
+form.account input {
+  width: 100%;
+  height: 40px;
+  background: #fff;
+  color: #555;
+  border: 1px solid #a49c7a;
+  border-radius: 5px;
+  padding: 0 25px;
+  box-shadow: 0 0 10px rgba(164, 156, 122, 0.0);
+}
+
+.error-check {
+  color: #f00;
+  padding-top: 5px;
+}
+
+.wrapper-captcha > img {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#captcha_img_src {
+  margin-left: 6px;
+}
+
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+.tab button.active {
+  background-color: #ccc;
+}
+
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  /* border: 1px solid #ccc; */
+  border-top: none;
+}
+
+.alert.alert-error {
+  background: #ca0000;
+  border-radius: 5px;
+}
+
+.alert {
+  width: 100%;
+  padding: 14px 16px 16px 16px;
+  background: #888;
+  color: #fff;
+  display: inline-block;
+  margin: 10px 0;
+}
+
+.list-card-recharge {
+  text-align: center;
+}
+
+.list-card-recharge .title {
+  color: #5c3746;
+  font-weight: 600;
+  padding: 20px 0;
+}
+
+.tags {
+  display: inline-block;
+  position: relative;
+  font-size: 0;
+  margin: 0 0 15px 0;
+}
+
+.tags a.selected {
+  border-color: #fa5e05;
+}
+
+.tags a {
+  min-width: 140px;
+  background: #fff;
+  border: 1px solid #a49c7a;
+  border-radius: 10px;
+  padding: 10px 15px;
+  display: inline-block;
+  position: relative;
+  margin: 0 10px 10px 0;
+  overflow: hidden;
+}
+
+.tags a.selected:before {
+  content: '';
+  width: 22px;
+  height: 22px;
+  background-color: #fa5e05;
+  background-image: url("https://gogun.vn/assets/img/icons_pay.png");
+  background-repeat: no-repeat;
+  background-position: -249px -44px;
+  border-radius: 100%;
+  position: absolute;
+  top: 50%;
+  left: 8%;
+  z-index: 12;
+  -webkit-transform: translatey(-50%);
+  -moz-transform: translatey(-50%);
+  -ms-transform: translatey(-50%);
+  -o-transform: translatey(-50%);
+  transform: translatey(-50%);
+}
+
+.tags a img {
+  vertical-align: top;
+}
+
+.ratio_deposite {
+  display: none;
+}
+
+.tags a.selected:after {
+  content: '';
+  background-color: #fa5e05;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  -webkit-filter: opacity(15%);
+  filter: opacity(15%);
+}
+
+.selects {
+  font-size: 0;
+  margin: 0 0 25px 0;
+}
+
+.selects select {
+  width: 300px;
+  max-width: 100%;
+  height: 40px;
+  display: inline-block;
+  border: 1px solid #a49c7a;
+  padding: 0 60px 0 22px;
+  margin: 0 10px 0 0;
+  font-size: 15px;
+  color: #a49c7a;
+  outline: 0;
+  border-radius: 5px;
+  background-image: url("https://gogun.vn/assets/img/select.png");
+  background-repeat: no-repeat;
+  background-position: center right;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.selects select option {
+  color: #000;
+}
+
+.img-thumbnail {
+  border: none ;
+  background-color: unset;
 }
