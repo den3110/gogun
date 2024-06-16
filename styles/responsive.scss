@@ -20,3 +20,25 @@
         -webkit-transform: scale(1.5);
     }   
 }
+
+@media screen and (max-width: 625px) {
+    .container {
+        width: 100% !important;
+    }
+    aside {
+        width: 100%;
+    }
+    .wrap-flex {
+        flex-direction: column;
+    }
+    main section {
+        width: 100% !important;
+    }
+    main {
+        overflow-x: hidden;
+        padding: 16px;
+    }
+    aside #login input {
+        width: calc(100% - 80px);
+    }
+}

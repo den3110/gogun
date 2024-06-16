@@ -1,6 +1,10 @@
 import React from "react";
+import ButtonAccount from "../../item/ButtonAccount";
+import handleLogout from "../../../api/post/logout";
+import Cookies from "js-cookie";
 
 const Info = () => {
+
   return (
     <div id="login">
       <div className="clearfix">
@@ -13,7 +17,13 @@ const Info = () => {
           }}
         >
           <p style={{ fontSize: "35px", color: "#555" }}>
-            <small style={{ fontSize: ".5em", fontFamily: '"BreeSerif"', display: "inline-block"}}>
+            <small
+              style={{
+                fontSize: ".5em",
+                fontFamily: '"BreeSerif"',
+                display: "inline-block",
+              }}
+            >
               Chào mừng Gunner
             </small>
             <span style={{ fontFamily: '"BreeSerif"' }}>datistpham</span>
@@ -27,9 +37,9 @@ const Info = () => {
         </button>
       </div>
       <div className="button-functional">
-        <a
+        <ButtonAccount
           className="item animElement slide-left in-view"
-          href="https://gogun.vn/account?type=recharge"
+          href="/account/5"
           style={{
             display: "inline-flex",
             backgroundColor: "rgb(245,98,0)",
@@ -38,17 +48,13 @@ const Info = () => {
             justifyContent: "center",
             alignItems: "center",
           }}
-        >
-          <img
-            src="https://gogun.vn/assets/svgs/sync-alt.svg"
-            style={{ fill: "white", margin: "0 auto" }}
-            alt="nap_tien"
-          />{" "}
-          Nạp Tiền
-        </a>
-        <a
+          src="https://gogun.vn/assets/svgs/sync-alt.svg"
+          alt="nap_tien"
+          title="Nạp tiền"
+        />
+        <ButtonAccount
+          href="/account"
           className="item animElement slide-right in-view"
-          href="https://gogun.vn/account"
           style={{
             display: "inline-flex",
             textAlign: "center",
@@ -58,19 +64,19 @@ const Info = () => {
             alignItems: "center",
             float: "right",
           }}
-        >
-          <img
-            src="https://gogun.vn/assets/svgs/id-card.svg"
-            alt=""
-            style={{ marginLeft: "11px", margin: "0 auto" }}
-          />
-          Tài Khoản
-        </a>
+          src="https://gogun.vn/assets/svgs/id-card.svg"
+          alt=""
+          title="Tài khoản"
+        />
       </div>
       <div className="button-functional">
-        <a
-          className="item animElement slide-left in-view"
-          href="https://mega.nz/folder/e64xwJhC#PdM5QbPzAtp_V6lf6RkjwA"
+        <ButtonAccount
+          href="/account"
+          onClick={async (e) => {
+            e.preventDefault();
+           
+          }}
+          className="item animElement slide-right in-view"
           style={{
             display: "inline-flex",
             backgroundColor: "#4775f7",
@@ -79,17 +85,20 @@ const Info = () => {
             justifyContent: "center",
             alignItems: "center",
           }}
-        >
-          <img
-            src="https://gogun.vn/assets/svgs/rocket.svg"
-            alt=""
-            style={{ margin: "0 auto" }}
-          />{" "}
-          Launcher
-        </a>
-        <a
+          src="https://gogun.vn/assets/svgs/rocket.svg"
+          alt=""
+          title="Launcher"
+        />
+        <ButtonAccount
+          href="/logout"
+          onClick={async (e) => {
+            e.preventDefault();
+            const result= await handleLogout();
+            Cookies.remove("accessToken")
+            Cookies.remove("refreshToken")
+            window.location.reload()
+          }}
           className="item animElement slide-right in-view"
-          href="https://gogun.vn/account/logout"
           style={{
             display: "inline-flex",
             textAlign: "center",
@@ -99,14 +108,10 @@ const Info = () => {
             alignItems: "center",
             float: "right",
           }}
-        >
-          <img
-            src="https://gogun.vn/assets/svgs/sign-out-alt.svg"
+          src="https://gogun.vn/assets/svgs/sign-out-alt.svg"
             alt=""
-            style={{ marginLeft: "11px", margin: "0 auto" }}
-          />
-          Đăng xuất
-        </a>
+          title="Đăng xuất"
+        />
       </div>
     </div>
   );

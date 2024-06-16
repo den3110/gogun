@@ -1,18 +1,17 @@
+import React from "react";
+import Banner from "../../components/General/Banner";
+import Footer from "../../components/General/Footer";
+import Header from "../../components/General/Header";
 
-import React from 'react'
-import Banner from '../../components/General/Banner'
-import Footer from '../../components/General/Footer'
-import Header from '../../components/General/Header'
-
-const WrapPage = ({children}) => {
+const WrapPage = ({ children }) => {
   return (
     <div className="outer">
-      <Header />  
-      <Banner />  
+      <Header />
+      <Banner />
       {children}
       <Footer />
-      </div>
-  )
-}
+    </div>
+  );
+};
 
-export default WrapPage
+export default WrapPage;

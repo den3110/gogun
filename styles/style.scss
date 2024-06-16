@@ -706,7 +706,7 @@ main section .tabsAnchor a:after {
 }
 
 main section .tabsAnchor a.active:after {
-  bottom: -4px;
+  // bottom: -4px;
   -webkit-filter: opacity(100%);
   filter: opacity(100%);
 }
@@ -841,7 +841,7 @@ main section .tabsAnchor.small a:after {
 }
 
 main section .tabsAnchor a.active:after {
-  bottom: -4px;
+  // bottom: -4px;
   -webkit-filter: opacity(100%);
   filter: opacity(100%);
 }
@@ -1293,4 +1293,68 @@ form.account input {
 .img-thumbnail {
   border: none ;
   background-color: unset;
+}
+
+form.account button {
+  margin-bottom: 20px;
+  background: linear-gradient(to bottom, rgba(245, 138, 26, 1) 0%, rgba(250, 83, 0, 1) 100%);
+  border: 1px solid #a49c7a;
+  border-radius: 5px;
+  width: 150px;
+  height: 45px;
+  line-height: 47px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  text-transform: uppercase;
+  display: inline-block;
+  letter-spacing: -0.01em;
+  cursor: pointer;
+  font-family: 'BreeSerif';
+}
+
+form.account .button .icon {
+  background-image: url("https://gogun.vn/assets/img/renders/signin.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 20px;
+  height: 21px;
+  display: inline-block;
+  vertical-align: middle;
+  /* margin: -4px 5px 0 0; */
+}
+
+.select-phoenix {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #a49c7a;
+  outline: none;
+}
+
+form.account input:disabled {
+  background: #e0dfdf !important;
+}
+
+.content table {
+  margin: 10px auto;
+  border-collapse: collapse;
+}
+
+.content table tr:nth-child(odd) {
+  background: #e3dac7;
+}
+
+.content table th {
+  color: #fff;
+  font-weight: bolder;
+  padding: 5px 10px;
+  background: #706446;
+  text-align: center;
+}
+
+.content table td {
+  border: 1px solid #c3a783;
+  padding: 3px 10px;
 }

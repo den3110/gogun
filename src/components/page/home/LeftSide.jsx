@@ -4,11 +4,21 @@ import Login from './Login'
 import ServerList from '../../General/ServerList'
 import Ranking from '../../General/Ranking'
 import FanPage from '../../General/FanPage'
+import useAuth from '../../../context/AuthContext'
+import Info from '../account/Info'
 
 const LeftSide = () => {
+  const isLoggedIn = useAuth();
+  console.log(isLoggedIn)
   return (
     <aside>
-        <Login />
+        {isLoggedIn=== true && 
+          <Info />
+        }
+        {
+          isLoggedIn=== false && 
+          <Login />
+        }
         <ServerList />
         <Ranking /> 
         <FanPage />

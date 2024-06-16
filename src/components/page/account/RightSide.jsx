@@ -1,16 +1,16 @@
 import React from "react";
-import Title from "./Title";
+import Title from "../../item/BigTitle";
 import TabContent from "./TabContent";
 import DynamicContent from "./DynamicContent";
 
-const RightSide = () => {
+const RightSide = (props) => {
   return (
     <section id="account">
       <section className="box register">
-        <Title />
+        <Title {...props} />
         <TabContent />
       </section>
-      <DynamicContent />
+      {props?.id && <DynamicContent {...props} />}
     </section>
   );
 };

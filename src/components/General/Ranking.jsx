@@ -1,6 +1,24 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import handleRanking from "../../api/get/ranking";
 
 const Ranking = () => {
+  const [data, setData] = useState([]);
+  const [server, setServer] = useState();
+  const [level, setLevel] = useState();
+  useEffect(() => {
+    (async () => {
+      try {
+        const data = {
+          server,
+          level,
+        };
+        const result = await handleRanking(data);
+        setData(result);
+      } catch (error) {
+        console.log(error);
+      }
+    })();
+  }, [server, level]);
   return (
     <div className="widget">
       <h3>BẢNG XẾP HẠNG</h3>
@@ -32,61 +50,16 @@ const Ranking = () => {
             <span>Nhân vật</span>
             <span className="right">Lực chiến</span>
           </li>
-          <span id="load-ranking-container" style={{display: "block"}}>
-            <li>
-              <span className="tag green">1</span>
-              <em title="TONY&nbsp;VIỆT">TONY&nbsp;VIỆT</em>
-              <span className="right">5,683,115</span>
-            </li>
-            <li>
-              <span className="tag green">2</span>
-              <em title="Anh Thư">Anh Thư</em>
-              <span className="right">5,333,076</span>
-            </li>
-            <li>
-              <span className="tag green">3</span>
-              <em title="J&nbsp;O&nbsp;K&nbsp;E&nbsp;R">
-                J&nbsp;O&nbsp;K&nbsp;E&nbsp;R
-              </em>
-              <span className="right">5,319,495</span>
-            </li>
-            <li>
-              <span className="tag green">4</span>
-              <em title="Steven9999">Steven9999</em>
-              <span className="right">4,929,138</span>
-            </li>
-            <li>
-              <span className="tag green">5</span>
-              <em title="CườngTiềnLẻ">CườngTiềnLẻ</em>
-              <span className="right">4,827,546</span>
-            </li>
-            <li>
-              <span className="tag green">6</span>
-              <em title="Lê Hiếu">Lê Hiếu</em>
-              <span className="right">4,725,150</span>
-            </li>
-            <li>
-              <span className="tag green">7</span>
-              <em title="RERRY">RERRY</em>
-              <span className="right">4,268,281</span>
-            </li>
-            <li>
-              <span className="tag green">8</span>
-              <em title="TeiBaoTV">TeiBaoTV</em>
-              <span className="right">3,841,430</span>
-            </li>
-            <li>
-              <span className="tag green">9</span>
-              <em title="T0p1">T0p1</em>
-              <span className="right">3,800,150</span>
-            </li>
-            <li>
-              <span className="tag green">10</span>
-              <em title="3vịt">3vịt</em>
-              <span className="right">3,464,925</span>
-            </li>
+          <span id="load-ranking-container" style={{ display: "block" }}>
+            {data?.map((item, key) => (
+              <li key={key}>
+                <span className="tag green">{parseInt(key) + parseInt(1)}</span>
+                <em title={item?.NickName}>{item?.NickName}</em>
+                <span className="right">{item?.FightPower}</span>
+              </li>
+            ))}
           </span>
-          <div id="loadingtop" style={{display: "none"}}></div>
+          <div id="loadingtop" style={{ display: "none" }}></div>
         </ul>
       </div>
     </div>
