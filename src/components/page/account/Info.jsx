@@ -54,7 +54,7 @@ const Info = () => {
         />
         <ButtonAccount
           href="/account"
-          className="item animElement slide-right in-view"
+          className="item animElement slide-right in-view m-flr-rm"
           style={{
             display: "inline-flex",
             textAlign: "center",
@@ -98,7 +98,7 @@ const Info = () => {
             Cookies.remove("refreshToken")
             window.location.reload()
           }}
-          className="item animElement slide-right in-view"
+          className="item animElement slide-right in-view m-flr-rm"
           style={{
             display: "inline-flex",
             textAlign: "center",

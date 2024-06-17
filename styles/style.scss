@@ -23,10 +23,14 @@ a {
 
 body {
   width: 100%;
-  background-color: white;
   background-position: top center;
   background-repeat: no-repeat;
-  background-image: url("https://gogun.vn/assets/img/bg3.png");
+  background-image: url("/background/background.png");
+}
+html {
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-image: url("/background/bg1.png");
 }
 
 .header {
@@ -1357,4 +1361,62 @@ form.account input:disabled {
 .content table td {
   border: 1px solid #c3a783;
   padding: 3px 10px;
+}
+
+.bottom-menu {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+  padding: 10px 0;
+  z-index: 1000;
+}
+
+.menu-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+}
+
+.menu-icon {
+  width: 24px;
+  height: 24px;
+  margin-bottom: 5px;
+}
+
+.menu-text {
+  font-size: 12px;
+  color: white;
+}
+
+.bottom-menu-container {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+
+.bottom-menu {
+  background-image: url('/background/background-bottom.png');
+  background-size: cover; 
+  background-position: center;
+}
+
+.button-download-game {
+  background-image: url('/background/bg-button.png');
+  background-size: cover; 
+  background-position: center;
+}
+
+.bg-header-mobile {
+  background-image: url('/background/bg-header-mobile.png');
+  background-size: cover; 
+  background-position: center;
 }

@@ -20,7 +20,7 @@ export default async function handler(req, res) {
           {expiresIn: "24h"}
         );
 
-        res.status(200).json({ accessToken, refreshToken });
+        res.status(200).json({ accessToken, refreshToken, ok: true });
       } else {
         res.status(401).json({ error: "Invalid credentials" });
       }

@@ -1,11 +1,18 @@
-import React from 'react'
-import Account from '../src/components/page/account/Account'
+import React from "react";
+import Account from "../src/components/page/account/Account";
+import { useRouter } from "next/router";
+import useAuth from "../src/context/AuthContext";
+import { useEffect } from "react";
 
 const Av = () => {
-  return (
-    <Account />
-  )
-}
+  const router = useRouter();
+  const isLoggedIn = useAuth();
+  useEffect(() => {
+    if (isLoggedIn === false) {
+      router.push("/");
+    }
+  }, [isLoggedIn]);
+  return <>{isLoggedIn === true && <Account />}</>;
+};
 
-export default Av
-  
+export default Av;

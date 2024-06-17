@@ -3,6 +3,9 @@ import Head from "next/head";
 import "../styles/style.scss";
 import "../styles/responsive.scss";
 import WrapPage from "../src/layouts/wrap/WrapPage";
+import { UserProvider } from "../src/layouts/wrap/WrapProfile";
+import BottomMenu from "../src/components/General/BottomMenu";
+import MediaQuery from "react-responsive";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -20,7 +23,12 @@ function MyApp({ Component, pageProps }) {
         />
       </Head>
       <WrapPage>
-        <Component {...pageProps} />
+        <UserProvider>
+          <Component {...pageProps} />
+          <MediaQuery maxWidth={625}>
+            <BottomMenu />
+          </MediaQuery>
+        </UserProvider>
       </WrapPage>
     </>
   );

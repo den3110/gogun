@@ -1,4 +1,4 @@
-import { verifyToken } from '../../utils/auth'; // Thay đổi tên và đường dẫn tùy thuộc vào cấu trúc dự án của bạn
+import { verifyToken } from '../../utils/auth.js'; // Thay đổi tên và đường dẫn tùy thuộc vào cấu trúc dự án của bạn
 
 export default async function handler(req, res) {
   if (req.method !== 'GET') {
@@ -14,6 +14,10 @@ export default async function handler(req, res) {
       id: userId,
       username: 'exampleUser',
       email: 'example@example.com',
+      coin: 0,
+      accountId: "31145",
+      phone: "039821928",
+      twoFa: false  
     };
 
     // Trả về thông tin người dùng

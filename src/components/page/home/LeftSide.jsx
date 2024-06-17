@@ -9,7 +9,6 @@ import Info from '../account/Info'
 
 const LeftSide = () => {
   const isLoggedIn = useAuth();
-  console.log(isLoggedIn)
   return (
     <aside>
         {isLoggedIn=== true && 

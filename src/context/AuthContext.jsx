@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import axios from "axios";
 import Cookies from "js-cookie";
+import cookie from "cookie"
 
 const useAuth = () => {
 //   const router = useRouter();
@@ -42,7 +43,7 @@ const useAuth = () => {
               }
             );
 
-            // Cập nhật trạng thái đăng nhập
+           
             setIsLoggedIn(true);
           } catch (refreshError) {
             console.error("Refresh token failed:", refreshError);

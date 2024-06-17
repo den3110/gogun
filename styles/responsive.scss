@@ -41,4 +41,21 @@
     aside #login input {
         width: calc(100% - 80px);
     }
+    .m-flr-rm {
+        float: none !important;
+        margin-left: 6px;
+    }
+    .slide-right-custom {
+        width: 100%;
+    }
+    main .listsquare li {
+        background: #fff;
+        border: 1px solid #d3d0c4;
+        border-radius: 4px;
+        width: 30%;
+        height: 80px;
+        margin: 0 1.5% 32px 1.5%;
+        display: inline-block;
+        vertical-align: top;
+    }
 }
