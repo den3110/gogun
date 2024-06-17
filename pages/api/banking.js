@@ -1,11 +1,15 @@
 // pages/api/data.js
 
-const data = [
-    {
-      ServerName: "Gà huyền thoại (Mới)",
-      ServerId: "1"
+const data = {
+    momo: {
+        account: "012456789",
+        name: "Nguyen Van A"
     },
-  ];
+    atm: {
+        account: "2190281092021",
+        name: "MBBank - Nguyen Van A"
+    }
+}
   
   export default function handler(req, res) {
     if (req.method === "GET") {

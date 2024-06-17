@@ -4,7 +4,9 @@
 @import "./layout/sidebar";
 @import "./layout/container";
 
-:-webkit-any(article, aside, nav, section) :-webkit-any(article, aside, nav, section) h1 {
+:-webkit-any(article, aside, nav, section)
+  :-webkit-any(article, aside, nav, section)
+  h1 {
   font-size: 1.17em;
   margin-block-start: 1em;
   margin-block-end: 1em;
@@ -327,201 +329,208 @@ main .listtag li .tag:after {
 }
 
 main .listtag li .tag {
-    width: 36px;
-    max-width: 32px;
-    height: 40px;
-    background: #000;
-    display: inline-block;
-    vertical-align: top;
-    margin: 0 12px 0 0;
-    text-align: center;
-    font-size: 10px;
-    text-transform: uppercase;
-    color: #fff;
-    letter-spacing: -0.02em;
-    position: relative;
-    -webkit-transition: all 200ms linear;
-    -moz-transition: all 200ms linear;
-    -ms-transition: all 200ms linear;
-    transition: all 200ms linear;
+  width: 36px;
+  max-width: 32px;
+  height: 40px;
+  background: #000;
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 12px 0 0;
+  text-align: center;
+  font-size: 10px;
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: -0.02em;
+  position: relative;
+  -webkit-transition: all 200ms linear;
+  -moz-transition: all 200ms linear;
+  -ms-transition: all 200ms linear;
+  transition: all 200ms linear;
 }
 
 aside .filter {
-    font-size: 0;
-    margin: 0 0 6px 0;
+  font-size: 0;
+  margin: 0 0 6px 0;
 }
 
 aside .filter select:first-child {
-    border-radius: 20px 0 0 20px;
+  border-radius: 20px 0 0 20px;
 }
 
 aside .filter select {
-    width: 50%;
-    height: 36px;
-    display: inline-block;
-    border: 1px solid #a49c7a;
-    padding: 0 12px;
-    font-size: 12px;
-    color: #a49c7a;
-    outline: 0;
-    background-image: url("https://gogun.vn/assets/img/select.png");
-    background-repeat: no-repeat;
-    background-position: center right;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
+  width: 50%;
+  height: 36px;
+  display: inline-block;
+  border: 1px solid #a49c7a;
+  padding: 0 12px;
+  font-size: 12px;
+  color: #a49c7a;
+  outline: 0;
+  background-image: url("https://gogun.vn/assets/img/select.png");
+  background-repeat: no-repeat;
+  background-position: center right;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 aside .filter select:last-child {
-    border-radius: 0 20px 20px 0;
-    border-left: 0;
+  border-radius: 0 20px 20px 0;
+  border-left: 0;
 }
 
 aside .widget ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 main .listtag li.head {
-    background: transparent;
-    font-size: 12px;
-    color: #a49c7a;
-    font-weight: 900;
-    margin: 0;
-    text-transform: uppercase;
+  background: transparent;
+  font-size: 12px;
+  color: #a49c7a;
+  font-weight: 900;
+  margin: 0;
+  text-transform: uppercase;
 }
 
 main .listtag.small li {
-    height: 30px;
-    line-height: 30px;
+  height: 30px;
+  line-height: 30px;
 }
 
 main .listtag li {
-    display: inline-block;
-    vertical-align: top;
-    width: 100%;
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
 }
 
 main .listtag li.head .tag {
-    background: transparent;
+  background: transparent;
 }
 
 main .listtag.small li .tag {
-    width: 26px;
-    max-width: 22px;
-    height: 20px;
-    line-height: 20px;
-    margin: 5px 10px 5px 5px;
+  width: 26px;
+  max-width: 22px;
+  height: 20px;
+  line-height: 20px;
+  margin: 5px 10px 5px 5px;
 }
 
 main .listtag li .right {
-    float: right;
-    padding: 0 8px;
-}           
-
-main .listtag.small li {
-    height: 30px;
-    line-height: 30px;
-    color: #545454;
+  float: right;
+  padding: 0 8px;
 }
 
-main .listtag li .tag.green, main .listtag li .tag.green:after {
-    background: #349517;
+main .listtag.small li {
+  height: 30px;
+  line-height: 30px;
+  color: #545454;
+}
+
+main .listtag li .tag.green,
+main .listtag li .tag.green:after {
+  background: #349517;
 }
 
 main .listtag.small li .tag:after {
-    top: 7px;
+  top: 7px;
 }
 
 main .listtag li .tag:after {
-    content: '';
-    width: 8px;
-    height: 8px;
-    background: #000;
-    position: absolute;
-    right: -3px;
-    top: 17px;
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-    transform: rotate(45deg);
+  content: "";
+  width: 8px;
+  height: 8px;
+  background: #000;
+  position: absolute;
+  right: -3px;
+  top: 17px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 main section {
-    width: 870px;
-    // float: right;
+  width: 870px;
+  // float: right;
 }
 
 .slideshow-container {
-    max-width: 620px;
-    position: relative;
-    margin: 0 0 40px 0;
-    border: 1px solid #385c84;
-    background: #1c324a;
-    box-shadow: 0 0 16px rgba(0, 0, 0, .3);
-    border-radius: 4px;
-    overflow: hidden;
-    float: left;
-}   
+  max-width: 620px;
+  position: relative;
+  margin: 0 0 40px 0;
+  border: 1px solid #385c84;
+  background: #1c324a;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+  overflow: hidden;
+  float: left;
+}
 
 .fade {
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.5s;
-    animation-name: fade;
-    animation-duration: 1.5s;
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
 }
 
 .mySlides > a > img {
-    vertical-align: middle;
+  vertical-align: middle;
 }
 
-.prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-10%);
-    width: auto;
-    padding: 8px 16px 9px 8px;
-    margin-top: -22px;
-    color: #ff850a;
-    background-color: rgba(245, 245, 245, .5);
-    font-weight: bold;
-    font-size: 32px;
-    transition: 0.6s ease;
-    border-radius: 0 32px 32px 0;
-    user-select: none;
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-10%);
+  width: auto;
+  padding: 8px 16px 9px 8px;
+  margin-top: -22px;
+  color: #ff850a;
+  background-color: rgba(245, 245, 245, 0.5);
+  font-weight: bold;
+  font-size: 32px;
+  transition: 0.6s ease;
+  border-radius: 0 32px 32px 0;
+  user-select: none;
 }
 
 .slide-right-custom {
-    width: 250px;
-    float: right;
-    margin: 0 0 40px 0;
+  width: 250px;
+  float: right;
+  margin: 0 0 40px 0;
 }
 
 .slide-right-custom > .item-right {
-    width: 100%;
-    height: 48px;
-    font-size: 12px;
-    text-transform: uppercase;
-    line-height: 48px;
-    margin: 0 0 5px 0;
+  width: 100%;
+  height: 48px;
+  font-size: 12px;
+  text-transform: uppercase;
+  line-height: 48px;
+  margin: 0 0 5px 0;
 }
 
-.item-right.active a, .dot.active, .dot:hover {
-    background-color: #ff850a !important;
-    color: #fff;
+.item-right.active a,
+.dot.active,
+.dot:hover {
+  background-color: #ff850a !important;
+  color: #fff;
 }
 
 .slide-right-custom > .item-right > a {
-    display: inline-block;
-    color: #92897a;
-    width: 100%;
-    height: 100%;
-    padding: 0 16px;
-    background-color: #f5e9d7;
-    cursor: pointer;
+  display: inline-block;
+  color: #92897a;
+  width: 100%;
+  height: 100%;
+  padding: 0 16px;
+  background-color: #f5e9d7;
+  cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 main .box.mid {
@@ -598,7 +607,7 @@ main section .box.guia > .title-new {
 }
 
 main section .box.guia > .title-new:before {
-  content: '';
+  content: "";
   width: 111px;
   height: 93px;
   background-image: url("https://gogun.vn/assets/img/renders/02.png");
@@ -672,7 +681,7 @@ main section .tabsAnchor a.active {
 }
 
 main section .tabsAnchor a {
-  color: #FFF;
+  color: #fff;
   padding: 0 18px;
   line-height: 42px;
   font-size: 13px;
@@ -689,7 +698,7 @@ main section .tabsAnchor a.active:after {
 }
 
 main section .tabsAnchor a:after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 4px;
   left: 50%;
@@ -772,7 +781,7 @@ main section .box.itens > .title-new {
 }
 
 main section .box.itens > .title-new:before {
-  content: '';
+  content: "";
   width: 75px;
   height: 77px;
   background-image: url("https://gogun.vn/assets/img/renders/03.png");
@@ -801,18 +810,18 @@ main section .tabsAnchor {
 
 main section .tabsAnchor.small a.active {
   /* color: #af6313; */
-  color: #FFFFFF;
+  color: #ffffff;
   font-weight: 900;
 }
 
 main section .tabsAnchor.small a {
   background: transparent;
-  color: #FFFFFF;
+  color: #ffffff;
   padding: 0 12px;
   line-height: 15px;
   font-size: 15px;
   font-weight: 400;
-  border-right: 1px solid #FFFFFF;
+  border-right: 1px solid #ffffff;
   display: inline-block;
   position: relative;
 }
@@ -851,7 +860,7 @@ main section .tabsAnchor a.active:after {
 }
 
 main section .tabsAnchor a:after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 4px;
   left: 50%;
@@ -952,8 +961,9 @@ footer .text {
   display: inline-block;
   width: 100%;
   text-align: center;
-  font-family: 'BreeSerif';
-  text-shadow: #000 0px 0px 20px, #000 0px 0px 10px, #000 0px 0px 10px, #000 0px 0px 10px, #000 0px 0px 1px, #000 0px 0px 1px;
+  font-family: "BreeSerif";
+  text-shadow: #000 0px 0px 20px, #000 0px 0px 10px, #000 0px 0px 10px,
+    #000 0px 0px 10px, #000 0px 0px 1px, #000 0px 0px 1px;
   color: #fffb51;
 }
 
@@ -980,7 +990,7 @@ footer .bottom a {
 }
 
 footer .bottom ul li:after {
-  content: '|';
+  content: "|";
   margin: 0 8px;
 }
 
@@ -1024,7 +1034,7 @@ main section .box.register > .title-new {
 }
 
 main section .box.register > .title-new:before {
-  content: '';
+  content: "";
   width: 75px;
   height: 77px;
   background-image: url("https://gogun.vn/assets/img/renders/05.gif");
@@ -1084,7 +1094,7 @@ form.detail-account label span {
   margin: 5px 0;
   justify-content: center;
   align-items: center;
-  font-family: 'BreeSerif';
+  font-family: "BreeSerif";
   margin-right: 8px;
 }
 
@@ -1132,7 +1142,7 @@ form.account input {
   border: 1px solid #a49c7a;
   border-radius: 5px;
   padding: 0 25px;
-  box-shadow: 0 0 10px rgba(164, 156, 122, 0.0);
+  box-shadow: 0 0 10px rgba(164, 156, 122, 0);
 }
 
 .error-check {
@@ -1225,7 +1235,7 @@ form.account input {
 }
 
 .tags a.selected:before {
-  content: '';
+  content: "";
   width: 22px;
   height: 22px;
   background-color: #fa5e05;
@@ -1253,7 +1263,7 @@ form.account input {
 }
 
 .tags a.selected:after {
-  content: '';
+  content: "";
   background-color: #fa5e05;
   width: 100%;
   height: 100%;
@@ -1295,13 +1305,17 @@ form.account input {
 }
 
 .img-thumbnail {
-  border: none ;
+  border: none;
   background-color: unset;
 }
 
 form.account button {
   margin-bottom: 20px;
-  background: linear-gradient(to bottom, rgba(245, 138, 26, 1) 0%, rgba(250, 83, 0, 1) 100%);
+  background: linear-gradient(
+    to bottom,
+    rgba(245, 138, 26, 1) 0%,
+    rgba(250, 83, 0, 1) 100%
+  );
   border: 1px solid #a49c7a;
   border-radius: 5px;
   width: 150px;
@@ -1315,7 +1329,7 @@ form.account button {
   display: inline-block;
   letter-spacing: -0.01em;
   cursor: pointer;
-  font-family: 'BreeSerif';
+  font-family: "BreeSerif";
 }
 
 form.account .button .icon {
@@ -1402,21 +1416,178 @@ form.account input:disabled {
   z-index: 1000;
 }
 
-
 .bottom-menu {
-  background-image: url('/background/background-bottom.png');
-  background-size: cover; 
+  background-image: url("/background/background-bottom.png");
+  background-size: cover;
   background-position: center;
 }
 
 .button-download-game {
-  background-image: url('/background/bg-button.png');
-  background-size: cover; 
+  background-image: url("/background/bg-button.png");
+  background-size: cover;
   background-position: center;
 }
 
 .bg-header-mobile {
-  background-image: url('/background/bg-header-mobile.png');
-  background-size: cover; 
+  background-image: url("/background/bg-header-mobile.png");
+  background-size: cover;
   background-position: center;
+}
+
+main .listtag li .tag.orange,
+main .listtag li .tag.orange:after {
+  background: #f28a1a;
+}
+
+main .listtag li .tag.red,
+main .listtag li .tag.red:after {
+  background: #983030;
+}
+
+main .listtag li a:hover {
+  color: #af6313;
+}
+
+a:hover {
+  color: #af6313;
+  text-decoration: none;
+}
+
+.dotList {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.dot.active {
+  background-color: #ff850a !important;
+  color: #fff;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #efefef;
+  border-radius: 50%;
+  border: 2px solid #ff850a;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+img {
+  color: #f28a1a;
+  text-decoration: none;
+  -webkit-transition: all 200ms linear;
+  -moz-transition: all 200ms linear;
+  -ms-transition: all 200ms linear;
+  -o-transition: all 200ms linear;
+  transition: all 200ms linear;
+}
+
+.fade1 {
+  animation: fade ;
+  animation-duration: .75s;
+}
+
+main .box.single {
+  padding: 30px;
+  background-color: #fff;
+  background-image: url("https://gogun.vn/assets/img/bg3.jpg");
+}
+
+
+main .banner {
+  border: 1px solid #385c84;
+  background: #1c324a;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+  overflow: hidden;
+  float: left;
+  margin: 0 0 30px 0;
+}
+
+main .box.single .share {
+  width: 60px;
+  float: left;
+  padding: 0 30px 0 0;
+}
+
+main .box.single .date {
+  width: 100%;
+  text-align: center;
+  color: #867768;
+  line-height: 10px;
+  padding: 5px 0 20px 0;
+}
+
+main .box.single .date .d {
+  font-size: 18px;
+  font-weight: 800;
+}
+
+main .box.single .share a[href*="facebook"] {
+  background-color: #3b5998;
+  background-position: -269px 9px;
+}
+
+main .box.single .share a[href*="whatsapp"] {
+  background-color: #0dc342;
+  background-position: -306px 10px;
+}
+
+main .box.single .share a[href*="twitter"] {
+  background-color: #20a2f2;
+  background-position: -342px 10px;
+}
+
+main .box.single .share a[href*="pinterest"] {
+  background-color: #be0f23;
+  background-position: -379px 10px;
+}
+
+main .box.single .share a {
+  width: 30px;
+  height: 30px;
+  border-radius: 3px;
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 0 5px 0;
+  background-color: #000;
+  background-image: url("https://gogun.vn/assets/img/icons.png");
+  background-repeat: no-repeat;
+}
+
+main .box.single .content {
+  float: left;
+  width: calc(100% - 60px);
+  border-left: 1px solid #e4e2e0;
+  padding: 0 0 0 30px;
+}
+
+main .box.single .content .title {
+  font-size: 13px;
+  font-weight: 900;
+  color: #fa5601;
+  text-transform: uppercase;
+  margin: 0 0 20px 0;
+}
+
+main .box.single .content p, main .box.single .content ul {
+  color: #4f4f4f;
+  font-size: 16px;
+  margin: 0 0 15px 0;
+  list-style: none;
+  line-height: 150%;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
 }

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import Info from "./Info";
 import ServerList from "../../General/ServerList";
 import Ranking from "../../General/Ranking";
@@ -15,4 +15,4 @@ const LeftSide = () => {
   );
 };
 
-export default LeftSide;
+export default memo(LeftSide);

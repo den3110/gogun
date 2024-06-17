@@ -5,18 +5,17 @@ const Input = (props) => {
     <label>
       <span>{props?.title}</span>
       <input
+        value={props?.value}
+        onChange={props?.onChange}
         type={props?.type}
-        id="txtOldPassword"
-        placeholder="••••••"
-        autoComplete="off"
-        required
+        {...props}
       />
       <div
         id="usernameError"
         className="error-check"
-        style={{ display: "none" }}
+        style={{ display: props?.display }}
       >
-        <div id="formtip_inner" className="error-check-mess" />
+        <div id="formtip_inner" className="error-check-mess">{props?.message}</div>
       </div>
     </label>
   );

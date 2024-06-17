@@ -16,11 +16,13 @@ const menuItems = [
     icon: "/icons/recharge.png",
     text: "Nạp tiền",
     link: "/account/5",
+    
   },
   {
     icon: "/icons/fanpage.png",
     text: "Fanpage",
     link: "/fanpage",
+    target: "_blank"
   },
 ];
 
@@ -31,7 +33,7 @@ const BottomMenu = () => {
       <div className="bottom-menu">
         {menuItems.map((item, index) => (
           <Link scroll={false} key={index} href={item.link}>
-            <a className="menu-item">
+            <a className="menu-item" target={item.target}>
               <img src={item.icon} alt={item.text} className="menu-icon" />
               <span className="menu-text">{item.text}</span>
             </a>

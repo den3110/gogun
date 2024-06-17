@@ -1,17 +1,17 @@
-import React, { useEffect, useState } from "react";
+import React, { memo, useEffect, useState } from "react";
 import handleServer from "../../api/get/server";
 
 const ServerList = () => {
   const [data, setData] = useState([]);
   useEffect(() => {
-    async () => {
+    (async () => {
       try {
         const result = await handleServer();
         setData(result);
       } catch (error) {
         console.log(error);
       }
-    };
+    })()
   }, []);
   return (
     <div className="widget">
@@ -25,7 +25,7 @@ const ServerList = () => {
             data?.map((item, key)=> 
             <li key={key}>
               <a href="#">
-                <span className="tag green">ON</span>Gà huyền thoại (Mới)
+                <span className="tag green">ON</span>{item.ServerName}
               </a>
             </li>
             )
@@ -36,4 +36,4 @@ const ServerList = () => {
   );
 };
 
-export default ServerList;
+export default memo(ServerList);

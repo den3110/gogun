@@ -12,7 +12,7 @@ const Av = () => {
       router.push("/");
     }
   }, [isLoggedIn]);
-  return <>{isLoggedIn === true && <Account />}</>;
+  return <>{isLoggedIn === true && <Account {...router.query} />}</>;
 };
 
 export default Av;

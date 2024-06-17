@@ -1,12 +1,35 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import SlideLeft from './SlideLeft'
 import SlideRight from './SlideRight'
+import handleNotification from '../../../api/get/notifcation'
 
 const Slide = () => {
+  const [tab, setTab]= useState(1)
+  const [data, setData]= useState([])
+  const [loading, setLoading]= useState()
+  useEffect(()=> {
+    (async ()=> {
+      try {
+        setLoading(true)
+        const result= await handleNotification()
+        setData(result)
+      } catch (error) {
+        setLoading(false)
+      }
+      finally {
+        setLoading(false)
+      }
+    })()
+  }, [])
+
+  const handleTab= (tab)=> {
+    setTab(tab)
+  }
+  
   return (
     <>
-      <SlideLeft />
-      <SlideRight />
+      <SlideLeft data={data} tab={tab} onClick={handleTab} />
+      <SlideRight data={data} tab={tab} onClick={handleTab} />
     </>
   )
 }

@@ -1,21 +1,19 @@
 import Link from "next/link";
 import React from "react";
 
-const SlideRight = () => {
+const SlideRight = (props) => {
   return (
     <div className="slide-right-custom animElement slide-right in-view">
-      <div className="item-right active">
-        <Link href={"/"} onClick={{}}>Hướng dẫn chơi trên điện thoại !!! (HOT)</Link>
-      </div>
-      <div className="item-right">
-        <Link href={"/"} onClick={{}}>Hướng Dẫn Nạp Thẻ !!!</Link>
-      </div>
-      <div className="item-right">
-        <Link href={"/"} onClick={{}}>Hướng Dẫn Tân Thủ !!!</Link>
-      </div>
-      <div className="item-right">
-        <Link href={"/"} onClick={{}}>Hội nhóm GunVip.VN (HOT)</Link>
-      </div>
+      {props?.data?.map((item, key) => (
+        <div
+          key={key}
+          className={`item-right ${props?.tab === item?.id && "active"}`}
+        >
+          <Link href={item?.link}>
+            <a onClick={(e)=> {e.preventDefault();props?.onClick(item?.id)}}>{item?.title}</a>
+          </Link>
+        </div>
+      ))}
     </div>
   );
 };

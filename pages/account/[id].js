@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { memo, useEffect } from "react";
 import LeftSide from "../../src/components/page/account/LeftSide";
 import RightSide from "../../src/components/page/account/RightSide";
 import { useRouter } from "next/router";
@@ -23,4 +23,4 @@ const PageAccount = () => {
   );
 };
 
-export default PageAccount;
+export default memo(PageAccount);

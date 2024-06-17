@@ -2,8 +2,11 @@ import React from "react";
 import ButtonAccount from "../../item/ButtonAccount";
 import handleLogout from "../../../api/post/logout";
 import Cookies from "js-cookie";
+import { useRouter } from "next/router";
 
 const Info = () => {
+
+  const router= useRouter()
 
   return (
     <div id="login">
@@ -74,7 +77,8 @@ const Info = () => {
           href="/account"
           onClick={async (e) => {
             e.preventDefault();
-           
+            // router
+            router.push("/")
           }}
           className="item animElement slide-right in-view"
           style={{
