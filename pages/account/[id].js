@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import LeftSide from "../../src/components/page/account/LeftSide";
-import RightSide from "../../src/components/page/account/RIghtSide";
+import RightSide from "../../src/components/page/account/RightSide";
 import { useRouter } from "next/router";
 import useAuth from "../../src/context/AuthContext";
 const PageAccount = () => {
