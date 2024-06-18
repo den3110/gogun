@@ -17,7 +17,8 @@ export default async function handler(req, res) {
       coin: 0,
       accountId: "31145",
       phone: "039821928",
-      twoFa: false  
+      twoFa: false,
+      verifyEmail: false
     };
 
     // Trả về thông tin người dùng

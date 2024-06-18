@@ -2,22 +2,25 @@ import Link from "next/link";
 import React from "react";
 import Title from "../../item/Title";
 import ButtonFunctional from "../../item/ButtonFunctional";
+import { useUser } from "../../../layouts/wrap/WrapProfile";
 
 const TabContent = () => {
+  const user= useUser()
+
   return (
     <div className="tabsContent">
       <div className="active biglist animElement slide-left in-view">
         <form className="detail-account">
-          <Title label={"Tên tài khoản:"} title={"datistpham@gmail.com"} />
-          <Title label={"Mã tài khoản:"} title={"31445"} />
-          <Title label={"Coin:"} title={"31445"} />
+          <Title label={"Tên tài khoản:"} title={user?.username} />
+          <Title label={"Mã tài khoản:"} title={user?.accountId} />
+          <Title label={"Coin:"} title={user?.coin} />
           <Title
             label={"Email:"}
-            title={"datistpham@gmai.com (❌ Chưa xác thực)"}
+            title={`${user?.email} ${user?.verifyEmail=== true ? "Đã xác thực" : "(❌ Chưa xác thực)"}`}
           />
-          <Title label={"Mã tài khoản:"} title={"0 Coin"} />
-          <Title label={"Số điện thoại:"} title={"0388012984"} />
-          <Title label={"Trạng thái 2FA:"} title={"Chưa kích hoạt"} />
+          <Title label={"Mã tài khoản:"} title={user?.coin} />
+          <Title label={"Số điện thoại:"} title={user?.phone} />
+          <Title label={"Trạng thái 2FA:"} title={`${user?.twoFa=== true ? "Đã kích hoạt" : "(❌ Chưa kích hoạt)"}`} />
           <div className="title-new">
             <h2
               style={{

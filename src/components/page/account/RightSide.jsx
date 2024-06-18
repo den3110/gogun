@@ -7,7 +7,7 @@ const RightSide = (props) => {
   return (
     <section id="account">
       <section className="box register">
-        <Title {...props} />
+        <Title title={"TÀI KHOẢN CỦA BẠN"} {...props} />
         <TabContent />
       </section>
       {props?.id && <DynamicContent {...props} />}

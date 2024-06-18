@@ -3,11 +3,14 @@ import ButtonAccount from "../../item/ButtonAccount";
 import handleLogout from "../../../api/post/logout";
 import Cookies from "js-cookie";
 import { useRouter } from "next/router";
+import { useUser } from "../../../layouts/wrap/WrapProfile";
 
 const Info = () => {
-
+  const user= useUser()
   const router= useRouter()
-
+  const handleClickPlay= ()=> {
+    router.push("/select-server")
+  }
   return (
     <div id="login">
       <div className="clearfix">
@@ -29,12 +32,13 @@ const Info = () => {
             >
               Chào mừng Gunner
             </small>
-            <span style={{ fontFamily: '"BreeSerif"' }}>datistpham</span>
+            <span style={{ fontFamily: '"BreeSerif"' }}>{user?.username}</span>
           </p>
         </div>
         <button
           className="login animElement slide-right in-view"
           style={{ float: "right", fontFamily: "BreeSerif" }}
+          onClick={()=> handleClickPlay()}
         >
           Play
         </button>

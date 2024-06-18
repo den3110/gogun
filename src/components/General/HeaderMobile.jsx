@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 const HeaderMobile = () => {
     
@@ -13,11 +14,13 @@ const HeaderMobile = () => {
           position: "fixed",
           left: 0,
           top: 0,
-          zIndex: 9999,
+          zIndex: 1001,
         }}
       >
         <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-          <img src="/logo/logo.png" alt="" />
+          <Link href="/">
+            <img src="/logo/logo.png" alt="" />
+          </Link>
           <div>
             <div style={{ color: "white", fontSize: 18 }}>GUN HUYỀN THOẠI</div>
             <div

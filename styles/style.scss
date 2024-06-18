@@ -1488,8 +1488,8 @@ img {
 }
 
 .fade1 {
-  animation: fade ;
-  animation-duration: .75s;
+  animation: fade;
+  animation-duration: 0.75s;
 }
 
 main .box.single {
@@ -1497,7 +1497,6 @@ main .box.single {
   background-color: #fff;
   background-image: url("https://gogun.vn/assets/img/bg3.jpg");
 }
-
 
 main .banner {
   border: 1px solid #385c84;
@@ -1575,7 +1574,8 @@ main .box.single .content .title {
   margin: 0 0 20px 0;
 }
 
-main .box.single .content p, main .box.single .content ul {
+main .box.single .content p,
+main .box.single .content ul {
   color: #4f4f4f;
   font-size: 16px;
   margin: 0 0 15px 0;
@@ -1589,5 +1589,261 @@ main .box.single .content p, main .box.single .content ul {
   }
   100% {
     opacity: 1;
+  }
+}
+
+.wrap-select-server {
+  .wrapper-select-server {
+    background-image: url("https://gogun.vn/assets/img/select-server/playbackground.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+  }
+
+  .frame-top,
+  .frame-bot {
+    width: 100%;
+    height: 50%;
+    padding: 0.75em;
+  }
+
+  .frame-top-t {
+    height: 69%;
+    width: 100%;
+    margin-bottom: 1%;
+  }
+
+  .frame-top-b {
+    width: 100%;
+    height: 30%;
+  }
+
+  .tb-box {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .box {
+    flex: 1;
+    margin: 0 2px;
+    width: 100%;
+    height: 100%;
+    background-color: #0c1826;
+    border: 2px solid #0f4653;
+  }
+
+  .tb-box > div {
+    width: 46%;
+  }
+
+  .tb-box > div > img,
+  .tb-box > div > a {
+    width: 90%;
+  }
+
+  .btn-select-server-stable {
+    background-image: linear-gradient(to bottom, #fde800, #fd9500);
+  }
+
+  .btn-select-server {
+    display: inline-block;
+    padding: 0.35em 0.9em;
+    border-radius: 1.2em;
+    font-size: 1.2em;
+    font-style: italic;
+    text-align: center;
+    color: #13000e;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .p-3 {
+    padding: 1rem !important;
+  }
+
+  .box-status {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .status-bt-maintenance {
+    color: #9f9f9f;
+  }
+
+  .m-2 {
+    margin: 0.5rem !important;
+  }
+
+  .status-maintenance {
+    border-color: #9f9f9f;
+  }
+
+  .status-badge {
+    height: 12px !important;
+    padding: 0 11px;
+    border-radius: 15px;
+    border-width: 1px;
+    border-style: solid;
+    margin-right: 5px;
+    position: relative;
+  }
+
+  .status-maintenance::before {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 10px;
+    background-color: #9f9f9f;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .status-bt-coming-soon {
+    color: #2ec864;
+  }
+
+  .status-bt-stable {
+    color: #fd9500;
+  }
+
+  .p-0 {
+    padding: 0 !important;
+  }
+  .m-0 {
+    margin: 0 !important;
+  }
+
+  .tb-box-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .tb-box-bottom > a {
+    display: inline-block;
+    width: 90%;
+    margin-bottom: 0.7em;
+  }
+  .btn-select-server-stable {
+    background-image: linear-gradient(to bottom, #fde800, #fd9500);
+  }
+
+  .btn-select-server {
+    display: inline-block;
+    padding: 0.35em 0.9em;
+    border-radius: 1.2em;
+    font-size: 1.2em;
+    font-style: italic;
+    text-align: center;
+    color: #13000e;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .d-flex {
+    display: -ms-flexbox !important;
+    display: flex !important;
+  }
+
+  .align-items-center {
+    -ms-flex-align: center !important;
+    align-items: center !important;
+  }
+  .justify-content-center {
+    -ms-flex-pack: center !important;
+    justify-content: center !important;
+  }
+  .flex-column {
+    -ms-flex-direction: column !important;
+    flex-direction: column !important;
+  }
+
+  .info-l {
+    flex: 3;
+  }
+  .info {
+    flex: 1;
+    height: 100%;
+    padding: 1em;
+    color: #fff;
+    margin-left: 2px;
+    margin-right: 2px;
+  }
+  .info > div {
+    flex: 1;
+  }
+  .font-weight-bold {
+    font-weight: 700 !important;
+  }
+  .info-username {
+    font-size: 1.1em;
+    color: #00b6b8;
+  }
+  .text-right {
+    text-align: right !important;
+  }
+  .btn-exit {
+    color: #ffc018;
+    font-style: italic;
+    text-decoration: underline;
+  }
+  .ml-1,
+  .mx-1 {
+    margin-left: 0.25rem !important;
+  }
+  .btn-l-footer {
+    padding: 0.2em 1.2em;
+    background-color: #4bbcdc;
+    border-radius: 1.2em;
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .box-r-link {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  .box {
+    flex: 1;
+    margin: 0 2px;
+    width: 100%;
+    height: 100%;
+    background-color: #0c1826;
+    border: 2px solid #0f4653;
+  }
+  .frame-top-t,
+  .frame-top-b {
+    display: flex;
+  }
+  .box-r-link .r-link > img {
+    width: 100%;
+    height: 100%;
+  }
+  .status-stable::before {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 10px;
+    background-image: linear-gradient(to bottom, #fde800, #fd9500);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .status-coming-soon::before {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 10px;
+    background-color: #2ec864;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }

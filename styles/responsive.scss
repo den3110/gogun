@@ -1,3 +1,20 @@
+@media only screen and (max-width: 1620px) {
+    .frame {
+        width: 75%;
+    }
+}
+
+.frame {
+    z-index: 999;
+    width: 60%;
+    height: 66.5%;
+    background-image: url("https://gogun.vn/assets/img/select-server/playKhung.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding: 2em 2.5em;
+    margin-top: 100px;
+}
+
 @media screen and (min-width: 1201px) {
     .animElement.zoom-out.in-view {
         opacity: 1;
@@ -58,4 +75,29 @@
         display: inline-block;
         vertical-align: top;
     }
+    main .listtag li a {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    main section .cards {
+        width: 100%;
+        text-align: center;
+    }
+    .button-functional-account .item {
+        width: 47%;
+    }
+    main section .box .biglist {
+        padding: 8px 10px 5px 10px;
+    }
 }
+
+@media (min-width: 576px) {
+    .col-sm-3 {
+        -ms-flex: 0 0 25%;
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+}
+

@@ -6,6 +6,8 @@ import WrapPage from "../src/layouts/wrap/WrapPage";
 import { UserProvider } from "../src/layouts/wrap/WrapProfile";
 import BottomMenu from "../src/components/General/BottomMenu";
 import MediaQuery from "react-responsive";
+import NProgressComponent from "../src/layouts/progress/Progress";
+import WrapLayout from "../src/layouts/wrap/WrapLayout";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -13,7 +15,10 @@ function MyApp({ Component, pageProps }) {
       <Head>
         <title>Go gun</title>
         <meta name="description" content="Go gun" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0"
+        />
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -22,14 +27,19 @@ function MyApp({ Component, pageProps }) {
           rel="stylesheet"
         />
       </Head>
-      <WrapPage>
-        <UserProvider>
-          <Component {...pageProps} />
-          <MediaQuery maxWidth={625}>
-            <BottomMenu />
-          </MediaQuery>
-        </UserProvider>
-      </WrapPage>
+      <>
+        <WrapLayout>
+          <>
+            <NProgressComponent />
+            <UserProvider>
+              <Component {...pageProps} />
+              <MediaQuery maxWidth={625}>
+                <BottomMenu />
+              </MediaQuery>
+            </UserProvider>
+          </>
+        </WrapLayout>
+      </>
     </>
   );
 }

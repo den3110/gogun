@@ -1,9 +1,9 @@
 import React from "react";
 
-const Title = () => {
+const Title = (props) => {
   return (
     <div className="title-new">
-      <h1 style={{ color: "#c3332a" }}>TÀI KHOẢN CỦA BẠN</h1>
+      <h1 style={{ color: "#c3332a" }}>{props?.title}</h1>
     </div>
   );
 };

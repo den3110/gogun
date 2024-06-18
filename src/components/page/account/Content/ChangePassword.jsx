@@ -6,7 +6,7 @@ const ChangePassword = () => {
   const [password, setPassword] = useState("");
   const [passwordConfirm, setPasswordConfirm] = useState("");
   const [captcha, setCaptcha] = useState("");
-  
+
   const [oldPasswordError, setOldPasswordError] = useState(false);
   const [passwordError, setPasswordError] = useState(false);
   const [passwordConfirmError, setPasswordConfirmError] = useState(false);
@@ -49,7 +49,7 @@ const ChangePassword = () => {
 
   return (
     <div className="active biglist">
-      <form id="changePasswordFrm" className="account" onSubmit={handleSubmit}>
+      <form id="changePasswordFrm" className="account">
         <Input
           id="txtOldPassword"
           placeholder="••••••"
@@ -112,7 +112,7 @@ const ChangePassword = () => {
             Vui lòng nhập Captcha
           </div>
         </label>
-        <div className="button-functional-account">
+        <div onClick={handleSubmit} className="button-functional-account">
           <a
             id="changePasswordBtn"
             className="item"
