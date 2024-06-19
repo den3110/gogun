@@ -2,6 +2,7 @@ import FullLayout from "../src/layouts/FullLayout";
 import Head from "next/head";
 import "../styles/style.scss";
 import "../styles/responsive.scss";
+import "../styles/template.scss";
 import WrapPage from "../src/layouts/wrap/WrapPage";
 import { UserProvider } from "../src/layouts/wrap/WrapProfile";
 import BottomMenu from "../src/components/General/BottomMenu";

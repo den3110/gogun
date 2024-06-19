@@ -15,7 +15,10 @@
     margin-top: 100px;
 }
 
-@media screen and (min-width: 1201px) {
+@media screen and (min-width: 1200px) {
+    .container {
+        max-width: 100%;
+    }
     .animElement.zoom-out.in-view {
         opacity: 1;
         filter: opacity(100%);
@@ -36,6 +39,12 @@
         -moz-transform: scale(1.5);
         -webkit-transform: scale(1.5);
     }   
+}
+
+@media screen and (max-width: 1200px) {
+    .wrap-flex {
+        flex-direction: column;
+    }
 }
 
 @media screen and (max-width: 625px) {

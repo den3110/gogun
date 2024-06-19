@@ -54,7 +54,7 @@ const Login = () => {
         className="login animElement slide-right in-view"
         id="loginbtn"
       >
-        Login
+        Đăng nhập
       </button>
       {loading=== true && 
         <div

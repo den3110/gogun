@@ -40,6 +40,7 @@ html {
 }
 
 nav#menu {
+  background-image: url("/background/nav.png") !important;
   width: 100%;
   height: auto;
   padding: 0 0 20px 0;
@@ -126,22 +127,27 @@ aside {
 }
 
 aside #login {
-  border: 1px solid #af6313;
+  border: none;
   border-radius: 4px;
-  background-color: #f5eada;
-  background-image: url("https://gogun.vn/assets/img/bg1.jpg");
-  padding: 14px;
+  // background-color: #f5eada;
+  background-image: url("/background/b1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  padding: 28px;
   padding-top: 45px;
   position: relative;
   margin: 0 0 20px 0;
-  box-shadow: 0 0 16px rgba(0, 0, 0, 0.3);
+  // box-shadow: 0 0 16px rgba(0, 0, 0, 0.3);
+  height: 233px;
 }
 
 aside #login input {
-  background: #fff;
+  background: none;
   border: 1px solid #a49c7a;
   color: #555;
-  width: 192px;
+  width: 164px;
   height: 40px;
   border-radius: 4px;
   margin: 0 0 6px 0;
@@ -169,7 +175,7 @@ aside #login button.login {
     rgba(250, 83, 0, 1) 100%
   );
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f58a1a', endColorstr='#fa5300',GradientType=0 );
-  border: 1px solid #a49c7a;
+  border: none;
   border-radius: 4px;
   width: 72px;
   height: 86px;
@@ -181,16 +187,18 @@ aside #login button.login {
   text-transform: uppercase;
   letter-spacing: -0.02em;
   cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
 }
 
-aside #login button.login:before {
-  content: "";
-  background: url("https://gogun.vn/assets/img/renders/signin.png");
-  width: 43px;
-  height: 42px;
-  display: inline-block;
-  vertical-align: top;
-}
+// aside #login button.login:before {
+//   content: "";
+//   background: url("https://gogun.vn/assets/img/renders/signin.png");
+//   width: 43px;
+//   height: 42px;
+//   display: inline-block;
+//   vertical-align: top;
+// }
 
 aside #login .footer {
   width: 110%;
@@ -224,31 +232,70 @@ aside #login:after {
   top: 25px;
   left: 121px;
 }
+.lm-20 {
+  height: 163px;
+}
+.widget1 {
+  background-image: url("/background/b4.png") !important  ;
+  height: 475px;
+}
+.s-wak {
+  margin-top: 20px !important;
+}
+.m-ass {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+.fp-widget {
+  background-image: url("/background/b5.png") !important  ;
+  height: 480px;
+  overflow: hidden;
+}
+
+.s-wak1 {
+  margin-top: 28px !important;
+}
 
 aside .widget,
 .card {
-  border: 1px solid #af6313;
-  border-radius: 4px;
-  background-color: #f5eada;
-  background-image: url("https://gogun.vn/assets/img/bg2.jpg");
+  border: none;
+  // border-radius: 4px;
+  // background-color: #f5eada;
   position: relative;
   margin: 0 0 30px 0;
-  box-shadow: 0 0 16px rgba(0, 0, 0, 0.3);
+  // box-shadow: 0 0 16px rgba(0, 0, 0, 0.3);
 }
-
+aside .widget {
+  background-image: url("/background/b2.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.a-no-bg {
+  background-color: transparent !important;
+}
 aside .widget h3,
 .card--title {
-  background: rgba(242, 138, 26, 0.2);
+  background: #ffd545;
   text-align: center;
   font-size: 15px;
   font-weight: 900;
-  color: #af6313;
+  color: #ad641a;
   padding: 12px;
+  width: 90%;
+  margin-top: 10px;
 }
 
 aside .widget .inner,
 .card--inner {
-  padding: 14px;
+  padding: 26px;
+}
+
+.w-lms {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 aside .widget ul {
@@ -313,20 +360,20 @@ main .listtag li .tag.green:after {
   background: #349517;
 }
 
-main .listtag li .tag:after {
-  content: "";
-  width: 8px;
-  height: 8px;
-  background: #000;
-  position: absolute;
-  right: -3px;
-  top: 17px;
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
+// main .listtag li .tag:after {
+//   content: "";
+//   width: 8px;
+//   height: 8px;
+//   background: #000;
+//   position: absolute;
+//   right: -3px;
+//   top: 17px;
+//   -webkit-transform: rotate(45deg);
+//   -moz-transform: rotate(45deg);
+//   -ms-transform: rotate(45deg);
+//   -o-transform: rotate(45deg);
+//   transform: rotate(45deg);
+// }
 
 main .listtag li .tag {
   width: 36px;
@@ -437,19 +484,23 @@ main .listtag.small li .tag:after {
   top: 7px;
 }
 
-main .listtag li .tag:after {
-  content: "";
-  width: 8px;
-  height: 8px;
-  background: #000;
-  position: absolute;
-  right: -3px;
-  top: 17px;
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  transform: rotate(45deg);
+// main .listtag li .tag:after {
+//   content: "";
+//   width: 8px;
+//   height: 8px;
+//   background: #000;
+//   position: absolute;
+//   right: -3px;
+//   top: 17px;
+//   -webkit-transform: rotate(45deg);
+//   -moz-transform: rotate(45deg);
+//   -ms-transform: rotate(45deg);
+//   -o-transform: rotate(45deg);
+//   transform: rotate(45deg);
+// }
+
+.l-awd:nth-of-type(odd) {
+  background-color: #fcf6dc;
 }
 
 main section {
@@ -517,7 +568,7 @@ main section {
 .dot.active,
 .dot:hover {
   background-color: #ff850a !important;
-  color: #fff;
+  color: #fff !important;
 }
 
 .slide-right-custom > .item-right > a {
@@ -601,16 +652,21 @@ main section .box.guia > .title-new {
   color: #c3332a;
   font-weight: 900;
   text-transform: uppercase;
-  display: inline-block;
+  display: flex;
   vertical-align: top;
   margin: -60px 0 0 20px;
 }
 
+main section .box.guia > .title-new h1 {
+  margin: 0;
+  align-self: flex-end;
+}
+
 main section .box.guia > .title-new:before {
   content: "";
-  width: 111px;
+  width: 70px;
   height: 93px;
-  background-image: url("https://gogun.vn/assets/img/renders/02.png");
+  background-image: url(/character/c1.png);
   background-repeat: no-repeat;
   background-position: center;
   display: inline-block;
@@ -689,6 +745,7 @@ main section .tabsAnchor a {
   border-right: 1px solid #d17717;
   display: inline-block;
   position: relative;
+  text-transform: uppercase;
 }
 
 main section .tabsAnchor a.active:after {
@@ -777,14 +834,14 @@ main section .box.itens > .title-new {
   text-transform: uppercase;
   display: inline-block;
   vertical-align: top;
-  margin: -50px 0 0 35px;
+  margin: -60px 0 0 35px;
 }
 
 main section .box.itens > .title-new:before {
   content: "";
   width: 75px;
-  height: 77px;
-  background-image: url("https://gogun.vn/assets/img/renders/03.png");
+  height: 100px;
+  background-image: url(/character/c2.png);
   background-repeat: no-repeat;
   background-position: center;
   display: inline-block;
@@ -798,6 +855,14 @@ main section .tabsAnchor.small {
   margin: -25px 0 0 0;
   text-transform: none;
   font-family: "BreeSerif";
+}
+.lb-el {
+  background-image: url("/background/b6.png") !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  border: none !important;
+  height: 86px !important;
 }
 
 main section .tabsAnchor {
@@ -831,9 +896,27 @@ main section .tabsAnchor a:first-child {
 }
 
 main section .tabsAnchor a.active {
-  background: #dd8226;
+  // background: #dd8226;
   color: #fff;
-  border-color: #dd8226;
+  // border-color: #dd8226;
+}
+
+ul.biglist.animElement.slide-left.in-view:before {
+  content: "";
+    width: 175px;
+    height: 175px;
+    background-image: url(/character/c4.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+    vertical-align: middle;
+    position: absolute;
+    right: -33px;
+    top: 50%;
+    background-size: contain;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    transform: translateY(-50%);
 }
 
 main section .tabsAnchor.small a:after {
@@ -924,7 +1007,7 @@ main .listsquare li span {
   color: #f28a1a;
   display: inline-block;
   vertical-align: top;
-  margin: 2px 0 0 0;
+  margin: 8px 0 0 0;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -1846,4 +1929,14 @@ main .box.single .content ul {
     left: 50%;
     transform: translate(-50%, -50%);
   }
+}
+#menu {
+  background-image: url("/background/nav.png");
+}
+
+#loginbtn {
+  background-image: url("/background/btn.png") !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: contain !important;
 }

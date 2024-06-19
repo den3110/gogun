@@ -32,51 +32,51 @@ const BoxItem = () => {
       <div className="tabsContent">
         <div id="tabArmas" className="active">
           <ul className="listsquare">
-            <li className="animElement zoom-out in-view">
+            <li className="animElement zoom-out in-view lb-el">
               <img src="https://gogun.vn/assets/img/itens/arm/machado-de-pedra.png" />
               <span>Hatchet</span>
             </li>
-            <li className="animElement zoom-out in-view">
+            <li className="animElement zoom-out in-view lb-el">
               <img src="https://gogun.vn/assets/img/itens/arm/ak-48.png" />
               <span>AK—48</span>
             </li>
-            <li className="animElement zoom-out in-view">
+            <li className="animElement zoom-out in-view lb-el">
               <img src="https://gogun.vn/assets/img/itens/arm/carro-voador.png" />
               <span>Hyper Car</span>
             </li>
-            <li className="animElement zoom-out in-view">
+            <li className="animElement zoom-out in-view lb-el">
               <img src="https://gogun.vn/assets/img/itens/arm/deus-da-forca.png" />
               <span>Titan</span>
             </li>
-            <li className="animElement zoom-out in-view">
+            <li className="animElement zoom-out in-view lb-el">
               <img src="https://gogun.vn/assets/img/itens/arm/super-workaholic.png" />
               <span>☆☆· White Collar</span>
             </li>
-            <li className="animElement zoom-out in-view">
+            <li className="animElement zoom-out in-view lb-el">
               <img src="https://gogun.vn/assets/img/itens/arm/super-pistola-dagua.png" />
               <span>Mighty Water Gun</span>
             </li>
-            <li className="animElement zoom-out in-view">
+            <li className="animElement zoom-out in-view lb-el">
               <img src="https://gogun.vn/assets/img/itens/arm/verdadeiro-chick-louco.png" />
               <span>True Crazy Chick</span>
             </li>
-            <li className="animElement zoom-out in-view">
+            <li className="animElement zoom-out in-view lb-el">
               <img src="https://gogun.vn/assets/img/itens/arm/verdadeira-cabeca-de-boi.png" />
               <span>☆ Undead Axe</span>
             </li>
-            <li className="animElement zoom-out in-view">
+            <li className="animElement zoom-out in-view lb-el">
               <img src="https://gogun.vn/assets/img/itens/arm/verdadeira-lanca-de-antiguidade.png" />
               <span>☆ Spear</span>
             </li>
-            <li className="animElement zoom-out in-view">
+            <li className="animElement zoom-out in-view lb-el">
               <img src="https://gogun.vn/assets/img/itens/arm/verdadeiro-bumerangue-do-amor.png" />
               <span>☆ Boomerang</span>
             </li>
-            <li className="animElement zoom-out in-view">
+            <li className="animElement zoom-out in-view lb-el">
               <img src="https://gogun.vn/assets/img/itens/arm/super-ovo-de-pascoa.png" />
               <span>☆☆·Easter Egg</span>
             </li>
-            <li className="animElement zoom-out in-view">
+            <li className="animElement zoom-out in-view lb-el">
               <img src="https://gogun.vn/assets/img/itens/arm/00.png" />
               <span>☆☆·Love of Snow</span>
             </li>

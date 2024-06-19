@@ -14,8 +14,10 @@ const ServerList = () => {
     })()
   }, []);
   return (
-    <div className="widget">
-      <h3>DANH SÁCH MÁY CHỦ</h3>
+    <div className="widget lm-20">
+      <div className="w-lms">
+        <h3>DANH SÁCH MÁY CHỦ</h3>
+      </div>
       <div className="inner">
         <ul
           id="servers-list-container"
@@ -23,8 +25,8 @@ const ServerList = () => {
         >
           {
             data?.map((item, key)=> 
-            <li key={key}>
-              <a href="#">
+            <li className="a-no-bg" key={key}>
+              <a className="a-no-bg" href="#">
                 <span className="tag green">ON</span>{item.ServerName}
               </a>
             </li>

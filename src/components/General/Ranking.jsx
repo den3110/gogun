@@ -19,10 +19,40 @@ const Ranking = () => {
       }
     })();
   }, [server, level]);
+
+  const renderArchieve= (archieve)=> {
+    switch (archieve) {
+      case 0:
+        return <img
+        style={{ marginRight: 6 }}
+        src="/archieve/a1.png"
+        alt=""
+      />
+       
+     case 1:
+      return <img
+        style={{ marginRight: 6 }}
+        src="/archieve/a2.png"
+        alt=""
+      />
+      case 2:
+        return <img
+          style={{ marginRight: 6 }}
+          src="/archieve/a4.png"
+          alt=""
+        />
+      default:
+        return <span className="" style={{minWidth: 24, marginRight: 6, display: "inline-flex", alignItems: 'center', justifyContent: 'center'}}>{parseInt(archieve) + parseInt(1)}</span>
+        break;
+    }
+  }
+
   return (
-    <div className="widget">
-      <h3>BẢNG XẾP HẠNG</h3>
-      <div className="inner">
+    <div className="widget widget1">
+      <div className="w-lms">
+        <h3 className="s-wak">BẢNG XẾP HẠNG</h3>
+      </div>
+      <div className="m-ass inner">
         <form
           id="frm-load-ranking"
           className="filter animElement slide-top in-view"
@@ -52,8 +82,8 @@ const Ranking = () => {
           </li>
           <span id="load-ranking-container" style={{ display: "block" }}>
             {data?.map((item, key) => (
-              <li key={key}>
-                <span className="tag green">{parseInt(key) + parseInt(1)}</span>
+              <li className="mt-0 mb-0 l-awd" key={key}>
+                {renderArchieve(key )}
                 <em title={item?.NickName}>{item?.NickName}</em>
                 <span className="right">{item?.FightPower}</span>
               </li>
