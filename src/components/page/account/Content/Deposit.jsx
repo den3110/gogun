@@ -257,7 +257,7 @@ const Deposit = () => {
             <br />
             <b>
               <font color="red">
-                Vui lòng chuyển khoản đúng nội dung "GG <b>31445</b>" để hệ
+                Vui lòng chuyển khoản đúng nội dung {`"`}GG <b>31445</b>{`"`} để hệ
                 thống có thể kiểm tra nhanh nhất ( &lt; 60 giây)
               </font>
             </b>
