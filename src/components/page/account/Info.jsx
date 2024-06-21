@@ -12,7 +12,7 @@ const Info = () => {
     router.push("/select-server")
   }
   return (
-    <div id="login">
+    <div id="login" className="login-info">
       <div className="clearfix">
         <div
           style={{
@@ -22,7 +22,7 @@ const Info = () => {
             overflow: "hidden",
           }}
         >
-          <p style={{ fontSize: "35px", color: "#555" }}>
+          <p className="p-awer" style={{ fontSize: "35px", color: "#555" }}>
             <small
               style={{
                 fontSize: ".5em",
@@ -37,6 +37,7 @@ const Info = () => {
         </div>
         <button
           className="login animElement slide-right in-view"
+          id="loginbtn"
           style={{ float: "right", fontFamily: "BreeSerif" }}
           onClick={()=> handleClickPlay()}
         >
@@ -55,7 +56,7 @@ const Info = () => {
             justifyContent: "center",
             alignItems: "center",
           }}
-          src="https://gogun.vn/assets/svgs/sync-alt.svg"
+          src="/icons/i1.png"
           alt="nap_tien"
           title="Nạp tiền"
         />
@@ -71,7 +72,7 @@ const Info = () => {
             alignItems: "center",
             float: "right",
           }}
-          src="https://gogun.vn/assets/svgs/id-card.svg"
+          src="/icons/i2.png"
           alt=""
           title="Tài khoản"
         />
@@ -93,7 +94,7 @@ const Info = () => {
             justifyContent: "center",
             alignItems: "center",
           }}
-          src="https://gogun.vn/assets/svgs/rocket.svg"
+          src="/icons/i4.png"
           alt=""
           title="Launcher"
         />
@@ -116,7 +117,7 @@ const Info = () => {
             alignItems: "center",
             float: "right",
           }}
-          src="https://gogun.vn/assets/svgs/sign-out-alt.svg"
+          src="/icons/i5.png"
             alt=""
           title="Đăng xuất"
         />

@@ -187,6 +187,30 @@
   main section .tabsAnchor a {
     white-space: nowrap;
   }
+  .button-functional {
+    display: flex;
+  }
+  .clearfix {
+    display: flex;
+  }
+  .button-functional .item {
+    padding: 8px 7px;
+    background-image: url("/background/b12.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+  }
+  .button-functional .item img {
+    max-height: 24px;
+  }
+  .login-info {
+    padding: 18px !important;
+    padding-top: 18px !important;
+  }
+  .p-awer {
+    font-size: 28px !important;
+  }
 }
 
 @media (min-width: 576px) {
