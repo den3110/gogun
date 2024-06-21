@@ -1,16 +1,12 @@
 import axiosInstance from "..";
 
-const register = async (data) => {
+const handleRegister = async (data) => {
   try {
-    const response = await axiosInstance.post("/auth-gogun/register", data);
-    const { accessToken, refreshToken } = response.data;
-
-    localStorage.setItem("accessToken", accessToken);
-    localStorage.setItem("refreshToken", refreshToken);
+    const response = await axiosInstance.post("/register", data);
     return response.data;
   } catch (error) {
     return error
   }
 };
 
-export default register;
+export default handleRegister;

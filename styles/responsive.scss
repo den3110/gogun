@@ -1,112 +1,220 @@
 @media only screen and (max-width: 1620px) {
-    .frame {
-        width: 75%;
-    }
+  .frame {
+    width: 75%;
+  }
 }
 
 .frame {
-    z-index: 999;
-    width: 60%;
-    height: 66.5%;
-    background-image: url("https://gogun.vn/assets/img/select-server/playKhung.png");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    padding: 2em 2.5em;
-    margin-top: 100px;
+  z-index: 999;
+  width: 60%;
+  height: 66.5%;
+  background-image: url("https://gogun.vn/assets/img/select-server/playKhung.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  padding: 2em 2.5em;
+  margin-top: 100px;
 }
 
 @media screen and (min-width: 1200px) {
-    .container {
-        max-width: 100%;
-    }
-    .animElement.zoom-out.in-view {
-        opacity: 1;
-        filter: opacity(100%);
-        -webkit-filter: opacity(100%);
-        transform: scale(1);
-        -o-transform: scale(1);
-        -ms-transform: scale(1);
-        -moz-transform: scale(1);
-        -webkit-transform: scale(1);
-    }
-    .animElement.zoom-out {
-        opacity: 0;
-        filter: opacity(0%);
-        -webkit-filter: opacity(0%);
-        transform: scale(1.5);
-        -o-transform: scale(1.5);
-        -ms-transform: scale(1.5);
-        -moz-transform: scale(1.5);
-        -webkit-transform: scale(1.5);
-    }   
+  .container {
+    max-width: 100%;
+  }
+  .animElement.zoom-out.in-view {
+    opacity: 1;
+    filter: opacity(100%);
+    -webkit-filter: opacity(100%);
+    transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1);
+    -moz-transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+  .animElement.zoom-out {
+    opacity: 0;
+    filter: opacity(0%);
+    -webkit-filter: opacity(0%);
+    transform: scale(1.5);
+    -o-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+  }
 }
 
 @media screen and (max-width: 1200px) {
-    .wrap-flex {
-        flex-direction: column;
-    }
+  .wrap-flex {
+    flex-direction: column;
+  }
 }
 
 @media screen and (max-width: 625px) {
-    .container {
-        width: 100% !important;
-    }
-    aside {
-        width: 100%;
-    }
-    .wrap-flex {
-        flex-direction: column;
-    }
-    main section {
-        width: 100% !important;
-    }
-    main {
-        overflow-x: hidden;
-        padding: 10px;
-    }
-    aside #login input {
-        width: calc(100% - 80px);
-    }
-    .m-flr-rm {
-        float: none !important;
-        margin-left: 6px;
-    }
-    .slide-right-custom {
-        width: 100%;
-    }
-    main .listsquare li {
-        background: #fff;
-        border: 1px solid #d3d0c4;
-        border-radius: 4px;
-        width: 30%;
-        height: 80px;
-        margin: 0 1.5% 32px 1.5%;
-        display: inline-block;
-        vertical-align: top;
-    }
-    main .listtag li a {
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
+  .container {
+    width: 100% !important;
+  }
+  aside {
+    width: 100%;
+  }
+  .wrap-flex {
+    flex-direction: column;
+  }
+  main section {
+    width: 100% !important;
+  }
+  main {
+    overflow-x: hidden;
+    padding: 10px;
+  }
+  aside #login input {
+    width: calc(100% - 80px);
+  }
+  .m-flr-rm {
+    float: none !important;
+    margin-left: 6px;
+  }
+  .slide-right-custom {
+    width: 100%;
+  }
+  main .listsquare li {
+    background: #fff;
+    border: 1px solid #d3d0c4;
+    border-radius: 4px;
+    width: 30%;
+    height: 80px;
+    margin: 0 1.5% 32px 1.5%;
+    display: inline-block;
+    vertical-align: top;
+  }
+  main .listtag li a {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 
-    main section .cards {
-        width: 100%;
-        text-align: center;
-    }
-    .button-functional-account .item {
-        width: 47%;
-    }
-    main section .box .biglist {
-        padding: 8px 10px 5px 10px;
-    }
+  main section .cards {
+    width: 100%;
+    text-align: center;
+  }
+  .button-functional-account .item {
+    width: 47%;
+  }
+  main section .box .biglist {
+    padding: 8px 10px 5px 10px;
+  }
+
+  .lm-20 {
+    // height: 145px !important;
+    // width: 70% !important;
+  }
+  .widget1 {
+    height: 656px;
+  }
+  .fp-widget {
+    height: 658px;
+  }
+  .fp-widget iframe {
+    width: 300px;
+    height: 500px;
+  }
+  body {
+    background-image: url("/background/b10.png");
+    background-position-y: 92px;
+  }
+  .wrap-flex {
+    margin-top: 300px;
+  }
+  aside #login {
+    // width: 70% !important;
+    // height: 212px !important;
+  }
+  .l-awd img {
+    width: 24px;
+  }
+  .maw-aw {
+    width: 35%;
+  }
+  .maw-aw img {
+    width: 100%;
+  }
+  main .listtag.small li {
+    height: 42px;
+  }
+  main section .box .biglist li {
+    // background-image: url("/background/b11.png");
+    // height: 88px;
+  }
+  main section .box .biglist li i[class*="icon"] {
+    min-width: 60px;
+    height: 60px;
+    width: 60px;
+  }
+  main section .box .biglist li strong {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  main section .box .biglist li p {
+    margin-bottom: 0;
+  }
+  ul.biglist.animElement.slide-left.in-view:before {
+    background-image: unset;
+  }
+  main section .box .biglist li p {
+    font-size: 12px;
+  }
+
+  .m-lis-a {
+    display: inline-block;
+    padding: 5px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: #2d2e2e;
+    overflow: hidden;
+    max-width: 25%;
+    min-width: 25%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    cursor: pointer;
+    margin-right: 10px;
+    color: white;
+    transition: all .15s linear;
+  }
+  .m-lis-a.active {
+    padding: 10px;
+    background-color: #07872e;
+  }
+  main section .tabsAnchor {
+    display: flex;
+  }
+  main section .tabsAnchor a {
+    white-space: nowrap;
+  }
 }
 
 @media (min-width: 576px) {
-    .col-sm-3 {
-        -ms-flex: 0 0 25%;
-        flex: 0 0 25%;
-        max-width: 25%;
-    }
+  .col-sm-3 {
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
 }
 
+@media screen and (max-width: 420px) {
+  .widget1 {
+    height: 570px;
+  }
+  .fp-widget {
+    height: 580px;
+  }
+  aside #login {
+    // height: 200px !important;
+  }
+  .lm-20 {
+    // height: 135px !important;
+    // overflow: auto;
+  }
+  main section .box .biglist li {
+    height: 85px;
+  }
+  main section .box .biglist li p {
+    font-size: 10px;
+  }
+}

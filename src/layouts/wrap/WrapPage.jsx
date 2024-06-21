@@ -26,7 +26,7 @@ const WrapPage = ({ children }) => {
         </MediaQuery>
         <Media lessThan="md">
           <HeaderMobile />
-          <BannerMobile />
+          {/* <BannerMobile /> */}
         </Media>
         <Banner />
         {children}

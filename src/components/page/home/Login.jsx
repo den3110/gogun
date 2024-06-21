@@ -1,15 +1,20 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import InputText from "../../item/InputText";
 import login from "../../../api/post/login";
 import Cookies from "js-cookie";
+import { useRouter } from "next/router";
 
 const Login = () => {
-  const [loading, setLoading]= useState()
+  const divRef = useRef(null);
+  const router= useRouter()
+  const [divHeight, setDivHeight] = useState(0);
+
+  const [loading, setLoading] = useState();
   const [account, setAccount] = useState("");
   const [password, setPassword] = useState("");
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setLoading(true)
+    setLoading(true);
     try {
       const data = {
         account,
@@ -22,15 +27,31 @@ const Login = () => {
         window.location.reload();
       }
     } catch (error) {
-      setLoading(false)
+      setLoading(false);
       console.log(error);
-    }
-    finally {
-      setLoading(false)
+    } finally {
+      setLoading(false);
     }
   };
+
+  useEffect(() => {
+    const img = new Image();
+    img.src = "/background/b1.png";
+    img.onload = () => {
+      if (divRef.current) {
+        const aspectRatio = img.height / img.width;
+        const divWidth = divRef.current.clientWidth;
+        setDivHeight(divWidth * aspectRatio);
+      }
+    };
+  }, []);
+
   return (
-    <div id="login">
+    <div
+      id="login"
+      ref={divRef}
+      style={{ width: "100%", height: `${divHeight}px` }}
+    >
       <InputText
         value={account}
         onChange={(e) => setAccount(e.target.value)}
@@ -56,7 +77,7 @@ const Login = () => {
       >
         Đăng nhập
       </button>
-      {loading=== true && 
+      {loading === true && (
         <div
           className="footer"
           id="sign-in-error"
@@ -72,10 +93,14 @@ const Login = () => {
           />
           <p style={{ fontWeight: "bold" }}> Đang đăng nhập, vui lòng đợi...</p>
         </div>
-      }
+      )}
       <div className="footer">
-        <a className="left animElement just-show in-view">Quên mật khẩu?</a>
-        <a className="right animElement just-show in-view">Đăng ký</a>
+        <a onClick={()=> {
+          router.push("/forgot-password")
+        }} className="left animElement just-show in-view cursor-pointer">Quên mật khẩu?</a>
+        <a onClick={()=> {
+          router.push("/register")
+        }} className="right animElement just-show in-view cursor-pointer">Đăng ký</a>
       </div>
     </div>
   );
