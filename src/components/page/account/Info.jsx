@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import ButtonAccount from "../../item/ButtonAccount";
 import handleLogout from "../../../api/post/logout";
 import Cookies from "js-cookie";
@@ -6,15 +6,36 @@ import { useRouter } from "next/router";
 import { useUser } from "../../../layouts/wrap/WrapProfile";
 
 const Info = () => {
-  const user= useUser()
-  const router= useRouter()
-  const handleClickPlay= ()=> {
-    router.push("/select-server")
-  }
+  const divRef = useRef(null);
+  const router = useRouter();
+  const [divHeight, setDivHeight] = useState(0);
+  const user = useUser();
+  const handleClickPlay = () => {
+    router.push("/select-server");
+  };
+
+  useEffect(() => {
+    const img = new Image();
+    img.src = "/background/b1.png";
+    img.onload = () => {
+      if (divRef.current) {
+        const aspectRatio = img.height / img.width;
+        const divWidth = divRef.current.clientWidth;
+        setDivHeight(divWidth * aspectRatio);
+      }
+    };
+  }, []);
+
   return (
-    <div id="login" className="login-info">
+    <div
+      id="login"
+      className="login-info"
+      ref={divRef}
+      style={{ width: "100%", height: `${divHeight}px` }}
+    >
       <div className="clearfix">
         <div
+          className="a-wka"
           style={{
             float: "left",
             maxWidth: "70%",
@@ -39,7 +60,7 @@ const Info = () => {
           className="login animElement slide-right in-view"
           id="loginbtn"
           style={{ float: "right", fontFamily: "BreeSerif" }}
-          onClick={()=> handleClickPlay()}
+          onClick={() => handleClickPlay()}
         >
           Play
         </button>
@@ -83,7 +104,7 @@ const Info = () => {
           onClick={async (e) => {
             e.preventDefault();
             // router
-            router.push("/")
+            router.push("/");
           }}
           className="item animElement slide-right in-view"
           style={{
@@ -102,10 +123,10 @@ const Info = () => {
           href="/logout"
           onClick={async (e) => {
             e.preventDefault();
-            const result= await handleLogout();
-            Cookies.remove("accessToken")
-            Cookies.remove("refreshToken")
-            window.location.reload()
+            const result = await handleLogout();
+            Cookies.remove("accessToken");
+            Cookies.remove("refreshToken");
+            window.location.reload();
           }}
           className="item animElement slide-right in-view m-flr-rm"
           style={{
@@ -118,7 +139,7 @@ const Info = () => {
             float: "right",
           }}
           src="/icons/i5.png"
-            alt=""
+          alt=""
           title="Đăng xuất"
         />
       </div>

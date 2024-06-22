@@ -189,6 +189,8 @@
   }
   .button-functional {
     display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .clearfix {
     display: flex;
@@ -210,6 +212,19 @@
   }
   .p-awer {
     font-size: 28px !important;
+  }
+  .tags a {
+    max-width: 30%;
+    min-width: auto;
+  }
+  .a-wka {
+    padding-left: 16px;
+  }
+  #txtPasscard {
+    width: 47% !important;
+  }
+  main section#account {
+    float: unset;
   }
 }
 

@@ -3,6 +3,7 @@ import LeftSide from "../../src/components/page/account/LeftSide";
 import RightSide from "../../src/components/page/account/RightSide";
 import { useRouter } from "next/router";
 import useAuth from "../../src/context/AuthContext";
+import MediaQuery from "react-responsive";
 const PageAccount = () => {
   //   const route= us
   const router = useRouter();
@@ -16,8 +17,10 @@ const PageAccount = () => {
   return (
     <main>
       <div className="container">
-        <LeftSide />
-        <RightSide {...router.query} />
+        <LeftSide {...router.query} />
+        <MediaQuery minWidth={625}>
+          <RightSide {...router.query} />
+        </MediaQuery>
       </div>
     </main>
   );
