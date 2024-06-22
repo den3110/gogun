@@ -1,14 +1,17 @@
-import FullLayout from "../src/layouts/FullLayout";
+// import FullLayout from "../src/layouts/FullLayout";
 import Head from "next/head";
 import "../styles/style.scss";
 import "../styles/responsive.scss";
 import "../styles/template.scss";
-import WrapPage from "../src/layouts/wrap/WrapPage";
+// import WrapPage from "../src/layouts/wrap/WrapPage";
 import { UserProvider } from "../src/layouts/wrap/WrapProfile";
 import BottomMenu from "../src/components/General/BottomMenu";
 import MediaQuery from "react-responsive";
 import NProgressComponent from "../src/layouts/progress/Progress";
 import WrapLayout from "../src/layouts/wrap/WrapLayout";
+import { ToastContainer } from "react-toastify";
+import SnackbarProvider from 'react-simple-snackbar'
+import 'react-toastify/dist/ReactToastify.css';
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -30,15 +33,16 @@ function MyApp({ Component, pageProps }) {
       </Head>
       <>
         <WrapLayout>
-          <>
+          <SnackbarProvider>
             <NProgressComponent />
             <UserProvider>
               <Component {...pageProps} />
               <MediaQuery maxWidth={625}>
                 <BottomMenu />
               </MediaQuery>
+              <ToastContainer/>
             </UserProvider>
-          </>
+          </SnackbarProvider>
         </WrapLayout>
       </>
     </>

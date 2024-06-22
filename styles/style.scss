@@ -1959,3 +1959,67 @@ main .box.single .content img {
   max-width: 100%;
 }
 
+/* HistoryRecharge.css */
+.MyTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.MyTable th, .MyTable td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.MyTable th {
+  background-color: #f2f2f2;
+}
+
+.clickable-row {
+  cursor: pointer;
+}
+
+.expanded-row td {
+  background-color: #f9f9f9;
+  padding: 16px;
+}
+
+/* CustomToast.css */
+.custom-toast {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: slideIn 0.5s;
+}
+
+.custom-toast-content {
+  display: flex;
+  align-items: center;
+}
+
+.custom-toast-icon {
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.custom-toast-close {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}

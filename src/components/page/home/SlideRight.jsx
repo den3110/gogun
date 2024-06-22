@@ -1,5 +1,7 @@
 import Link from "next/link";
 import React from "react";
+import BoxCard from "./BoxCard";
+import MediaQuery from "react-responsive";
 
 const SlideRight = (props) => {
   return (
@@ -14,6 +16,9 @@ const SlideRight = (props) => {
           </Link>
         </div>
       ))}
+      <MediaQuery minWidth={625}>
+        <BoxCard />
+      </MediaQuery>
     </div>
   );
 };
