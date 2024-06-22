@@ -59,13 +59,13 @@ const Info = () => {
         <button
           className="login animElement slide-right in-view"
           id="loginbtn"
-          style={{ float: "right", fontFamily: "BreeSerif" }}
+          style={{ float: "right", fontFamily: "BreeSerif", maxWidth: "calc(30% - 6px)" }}
           onClick={() => handleClickPlay()}
         >
           Play
         </button>
       </div>
-      <div className="button-functional">
+      <div className="button-functional top-btn-functional">
         <ButtonAccount
           className="item animElement slide-left in-view"
           href="/account/5"

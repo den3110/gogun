@@ -46,7 +46,24 @@
     flex-direction: column;
   }
 }
-
+@media screen and (min-width: 625px) {
+  .button-functional .item img {
+    width: 24px ;
+  }
+  .button-functional .item {
+    padding: 8px 10px
+  }
+  aside #login.login-info {
+    padding-top: 30px;
+  }
+  .button-functional .item {
+    background-image: url("/background/b12.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: transparent !important;
+    border-color: transparent !important;
+  }
+}
 @media screen and (max-width: 625px) {
   .container {
     width: 100% !important;
@@ -71,8 +88,17 @@
     float: none !important;
     margin-left: 6px;
   }
+  .button-functional .item {
+    font-size: 14px !important;
+  }
+  .button-functional .item img {
+    max-width: 16px;
+  }
   .slide-right-custom {
     width: 100%;
+  }
+  .clearfix {
+    height: 74px ;
   }
   main .listsquare li {
     background: #fff;
@@ -225,6 +251,9 @@
   }
   main section#account {
     float: unset;
+  }
+  .top-btn-functional {
+    margin-top: 20px ;
   }
 }
 
