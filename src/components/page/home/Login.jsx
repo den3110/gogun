@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import InputText from "../../item/InputText";
 import login from "../../../api/post/login";
-import Cookies from "js-cookie";
 import { useRouter } from "next/router";
 
 const Login = () => {
@@ -22,8 +21,8 @@ const Login = () => {
       };
       const result = await login(data);
       if (result?.ok === true) {
-        Cookies.set("accessToken", result?.accessToken);
-        Cookies.set("refreshToken", result?.refreshToken);
+        localStorage.setItem("accessToken", result?.accessToken);
+        localStorage.setItem("refreshToken", result?.refreshToken);
         window.location.reload();
       }
     } catch (error) {

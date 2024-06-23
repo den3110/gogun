@@ -2,17 +2,15 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import axios from "axios";
-import Cookies from "js-cookie";
-import cookie from "cookie"
 
 const useAuth = () => {
-//   const router = useRouter();
+  //   const router = useRouter();
   const [isLoggedIn, setIsLoggedIn] = useState();
 
   useEffect(() => {
     async function checkAuth() {
-      const accessToken = Cookies.get("accessToken");
-      const refreshToken = Cookies.get("refreshToken");
+      const accessToken = localStorage.getItem("accessToken");
+      const refreshToken = localStorage.getItem("refreshToken");
       if (!accessToken || !refreshToken) {
         setIsLoggedIn(false);
         return;
@@ -29,21 +27,15 @@ const useAuth = () => {
           error.response.data.error === "TokenExpiredError"
         ) {
           try {
-       
             const refreshResponse = await axios.post("/api/refreshToken", {
               refreshToken,
             });
 
-            document.cookie = cookie.serialize(
+            localStorage.setItem(
               "accessToken",
-              refreshResponse.data.accessToken,
-              {
-                httpOnly: true,
-                maxAge: 60 * 15, 
-              }
+              refreshResponse.data.accessToken
             );
 
-           
             setIsLoggedIn(true);
           } catch (refreshError) {
             console.error("Refresh token failed:", refreshError);

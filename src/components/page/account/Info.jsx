@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import ButtonAccount from "../../item/ButtonAccount";
 import handleLogout from "../../../api/post/logout";
-import Cookies from "js-cookie";
 import { useRouter } from "next/router";
 import { useUser } from "../../../layouts/wrap/WrapProfile";
 
@@ -124,8 +123,8 @@ const Info = () => {
           onClick={async (e) => {
             e.preventDefault();
             const result = await handleLogout();
-            Cookies.remove("accessToken");
-            Cookies.remove("refreshToken");
+            localStorage.removeItem("accessToken");
+            localStorage.removeItem("refreshToken");
             window.location.reload();
           }}
           className="item animElement slide-right in-view m-flr-rm"
