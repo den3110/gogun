@@ -1,20 +1,11 @@
 import React, { memo, useEffect, useRef, useState } from "react";
 import handleServer from "../../api/get/server";
+import ServerListData from "../../context/ServerListContext";
 
 const ServerList = () => {
   const divRef = useRef(null);
   const [divHeight, setDivHeight] = useState(0);
-  const [data, setData] = useState([]);
-  useEffect(() => {
-    (async () => {
-      try {
-        const result = await handleServer();
-        setData(result);
-      } catch (error) {
-        console.log(error);
-      }
-    })();
-  }, []);
+  const data = ServerListData()
 
   useEffect(() => {
     const img = new Image();

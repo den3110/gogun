@@ -1,24 +1,11 @@
-import { createContext, useContext, useState, useEffect } from 'react';
+import { createContext, useContext, useState, useEffect, memo } from 'react';
 import axios from 'axios';
-import handleGetuser from '../../api/get/user';
+import UserData from '../../context/UserContext';
 
 const UserContext = createContext();
 
-export const UserProvider = ({ children }) => {
-  const [user, setUser] = useState(null);
-
-  useEffect(() => {
-    const fetchUser = async () => {
-      try {
-        const response = await handleGetuser();
-        setUser(response);
-      } catch (error) {
-        console.error('Failed to fetch user data:', error);
-      }
-    };
-
-    fetchUser();
-  }, []);
+const UserProvider = ({ children }) => {
+  const user= UserData()
 
   return (
     <UserContext.Provider value={user}>
@@ -26,5 +13,7 @@ export const UserProvider = ({ children }) => {
     </UserContext.Provider>
   );
 };
+
+export default memo(UserProvider)
 
 export const useUser = () => useContext(UserContext);
