@@ -8,9 +8,8 @@ const UserData = () => {
   const [user, setUser] = useState(JSON.parse(window.localStorage.getItem("userData")) || {});
   useEffect(() => {
     const fetchUser = async () => {
-      const userData = (JSON.parse(localStorage.getItem("userData")) || {});
-      console.log(userData?.username)
       try {
+        const userData = (JSON.parse(localStorage.getItem("userData")) || {});
         if(userData?.username) {
             setUser(userData)
             return

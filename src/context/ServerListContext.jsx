@@ -6,13 +6,12 @@ import handleServer from "../api/get/server";
 
 const ServerListData = () => {
   //   const router = useRouter();
-  const [data, setData] = useState(JSON.parse(window.localStorage.getItem("serverList")) || {});
+  const [data, setData] = useState(JSON.parse(window.localStorage.getItem("serverList")) || []);
   useEffect(() => {
     const fetchData = async () => {
-      const serverData = (JSON.parse(localStorage.getItem("serverList")) || {});
-      console.log(serverData)
       try {
-        if(serverData) {
+        const serverData = (JSON.parse(localStorage.getItem("serverList")) || []);
+        if(serverData?.length > 0) {
             setData(serverData)
             return
         }

@@ -126,6 +126,7 @@ const Info = () => {
             localStorage.removeItem("accessToken");
             localStorage.removeItem("refreshToken");
             localStorage.removeItem("userData");
+            localStorage.removeItem("serverList");
             window.location.reload();
           }}
           className="item animElement slide-right in-view m-flr-rm"
