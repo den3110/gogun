@@ -4,6 +4,7 @@ import RightSide from "../../src/components/page/account/RightSide";
 import { useRouter } from "next/router";
 import MediaQuery from "react-responsive";
 import { AuthContext } from "../../src/layouts/wrap/WrapAuth";
+
 const PageAccount = () => {
   //   const route= us
   const router = useRouter();
@@ -14,6 +15,7 @@ const PageAccount = () => {
     }
 
   }, [auth])
+  
   return (
     <main>
       <div className="container">

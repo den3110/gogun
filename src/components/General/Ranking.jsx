@@ -1,12 +1,13 @@
 import React, { useEffect, useRef, useState } from "react";
 import handleRanking from "../../api/get/ranking";
+import RankingListData from "../../context/RankingListContext";
 
 const Ranking = () => {
   const divRef = useRef(null);
   const [divHeight, setDivHeight] = useState(0);
-  const [data, setData] = useState([]);
   const [server, setServer] = useState();
   const [level, setLevel] = useState();
+  const [data, setData] = useState([]);
   useEffect(() => {
     (async () => {
       try {

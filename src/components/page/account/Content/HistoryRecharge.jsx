@@ -96,12 +96,14 @@ const HistoryRecharge = () => {
                   </tr>
                   {expandedRow === index && (
                     <tr className="expanded-row">
-                      <td>{row.type}</td>
-                      <td>{row.serial}</td>
-                      <td>{row.code}</td>
-                      <td>{row.amount}</td>
-                      <td>{row.time}</td>
-                      <td colSpan="6">{row.details}</td>
+                      <div>
+                        <div>{row.type}</div>
+                        <div>{row.serial}</div>
+                        <div>{row.code}</div>
+                        <div>{row.amount}</div>
+                        <div>{row.time}</div>
+                        <div>{row.details}</div>
+                      </div>
                     </tr>
                   )}
                 </React.Fragment>

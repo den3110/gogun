@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 
 const Login = () => {
   const divRef = useRef(null);
-  const router= useRouter()
+  const router = useRouter();
   const [divHeight, setDivHeight] = useState(0);
 
   const [loading, setLoading] = useState();
@@ -46,7 +46,7 @@ const Login = () => {
   }, []);
 
   return (
-    <div
+    <form
       id="login"
       ref={divRef}
       style={{ width: "100%", height: `${divHeight}px` }}
@@ -70,6 +70,7 @@ const Login = () => {
         autoComplete="new-password"
       />
       <button
+        type="submit"
         onClick={handleSubmit}
         className="login animElement slide-right in-view"
         id="loginbtn"
@@ -94,14 +95,24 @@ const Login = () => {
         </div>
       )}
       <div className="footer">
-        <a onClick={()=> {
-          router.push("/forgot-password")
-        }} className="left animElement just-show in-view cursor-pointer">Quên mật khẩu?</a>
-        <a onClick={()=> {
-          router.push("/register")
-        }} className="right animElement just-show in-view cursor-pointer">Đăng ký</a>
+        <a
+          onClick={() => {
+            router.push("/forgot-password");
+          }}
+          className="left animElement just-show in-view cursor-pointer"
+        >
+          Quên mật khẩu?
+        </a>
+        <a
+          onClick={() => {
+            router.push("/register");
+          }}
+          className="right animElement just-show in-view cursor-pointer"
+        >
+          Đăng ký
+        </a>
       </div>
-    </div>
+    </form>
   );
 };
 
