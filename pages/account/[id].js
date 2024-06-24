@@ -1,19 +1,19 @@
-import React, { memo, useEffect } from "react";
+import React, { memo, useContext, useEffect } from "react";
 import LeftSide from "../../src/components/page/account/LeftSide";
 import RightSide from "../../src/components/page/account/RightSide";
 import { useRouter } from "next/router";
-import useAuth from "../../src/context/AuthContext";
 import MediaQuery from "react-responsive";
+import { AuthContext } from "../../src/layouts/wrap/WrapAuth";
 const PageAccount = () => {
   //   const route= us
   const router = useRouter();
-  const isLoggedIn= useAuth()
+  const {auth }= useContext(AuthContext)
   useEffect(()=> {
-    if(isLoggedIn=== false) {
+    if(auth=== false) {
       router.push("/")
     }
 
-  }, [isLoggedIn])
+  }, [auth])
   return (
     <main>
       <div className="container">

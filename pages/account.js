@@ -1,18 +1,18 @@
-import React from "react";
+import React, { useContext } from "react";
 import Account from "../src/components/page/account/Account";
 import { useRouter } from "next/router";
-import useAuth from "../src/context/AuthContext";
 import { useEffect } from "react";
+import { AuthContext } from "../src/layouts/wrap/WrapAuth";
 
 const Av = () => {
   const router = useRouter();
-  const isLoggedIn = useAuth();
+  const { auth } = useContext(AuthContext);
   useEffect(() => {
-    if (isLoggedIn === false) {
+    if (auth === false) {
       router.push("/");
     }
-  }, [isLoggedIn]);
-  return <>{isLoggedIn === true && <Account {...router.query} />}</>;
+  }, [auth]);
+  return <>{auth === true && <Account {...router.query} />}</>;
 };
 
 export default Av;

@@ -1,21 +1,21 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Login from './Login'
 // import ServerList from './ServerList'
 import ServerList from '../../General/ServerList'
 import Ranking from '../../General/Ranking'
 import FanPage from '../../General/FanPage'
-import useAuth from '../../../context/AuthContext'
 import Info from '../account/Info'
+import { AuthContext } from '../../../layouts/wrap/WrapAuth'
 
 const LeftSide = () => {
-  const isLoggedIn = useAuth();
+  const { auth } = useContext(AuthContext);
   return (
     <aside>
-        {isLoggedIn=== true && 
+        {auth=== true && 
           <Info />
         }
         {
-          isLoggedIn=== false && 
+          auth=== false && 
           <Login />
         }
         <ServerList />

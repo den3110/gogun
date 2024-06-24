@@ -12,6 +12,7 @@ import WrapLayout from "../src/layouts/wrap/WrapLayout";
 import { ToastContainer } from "react-toastify";
 import SnackbarProvider from 'react-simple-snackbar'
 import 'react-toastify/dist/ReactToastify.css';
+import WrapAuth from "../src/layouts/wrap/WrapAuth";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -31,7 +32,7 @@ function MyApp({ Component, pageProps }) {
           rel="stylesheet"
         />
       </Head>
-      <>
+      <WrapAuth>
         <WrapLayout>
           <SnackbarProvider>
             <NProgressComponent />
@@ -44,7 +45,7 @@ function MyApp({ Component, pageProps }) {
             </UserProvider>
           </SnackbarProvider>
         </WrapLayout>
-      </>
+      </WrapAuth>
     </>
   );
 }
